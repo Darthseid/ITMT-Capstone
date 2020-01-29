@@ -1,2 +1,6 @@
 # 2020-team13w
-Private Repo for Class Work
+# Team Members
+Michael Kotlyar
+Amairani Lopez
+Jared McVey
+Jorell Socorro
