@@ -7,7 +7,10 @@
     - Watch over all members works and progress
     - Do minor development coding  
  - Michael Kotlyar  
-    -  
+    - Cyber security
+    - Design outline app process and functions
+    - Document instructions for related process towards security
+    - Getting ip to test their devices if its on the internet
  - Amairani Lopez  
     -  
  - Jared McVey  
@@ -27,7 +30,7 @@
   - Explanation of security issues that were discovered  
 
   - Giving awareness to users who have smart devices and see if they have vulnerabilities  
-    - shodan, nmaps, powerBI?(UI/UX), python pandas, piHoles (list out templates), zenmap etc.  
+    - shodan, nmaps, powerBI?(UI/UX), python pandas, piHoles (list out templates), massscan, port forwarding, public IP vulnerabilities, get my ip ---> shodan, zenmap etc.  
     - python (anvil.works)??  
     - database mongodb  
     - Figure out different versions of devices  
