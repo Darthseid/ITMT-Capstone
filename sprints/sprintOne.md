@@ -12,9 +12,16 @@
     - Document instructions for related process towards security
     - Getting ip to test their devices if its on the internet
  - Amairani Lopez  
-    -  
+    - Frontend of web app and mobile app
+    - Will be working alongside with Jared to make sure frontend and backend is linked
+    - Help create diagrams for the frontend side
+    - Design with a variety of different programs for frontend
  - Jared McVey  
-    -  
+    - Will create the backend of the program
+    - Link up a database that will collect data
+    - Primarily use python to work
+    - Will keep communication with security and Frontend
+
 # SprintOne goal
   - Discuss the overall idea of the product
   - Solidify what language and outside resources we are going to use  
