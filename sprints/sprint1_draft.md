@@ -1,6 +1,6 @@
 # Sprint-01 Report
 
-## Team Number XX
+## Team Number 13
 
 - Jorell Socorro (Project Manager/IT Infrastructure)
     - I will be in charge of organization of social networks
