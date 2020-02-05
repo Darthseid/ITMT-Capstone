@@ -33,9 +33,13 @@
   - Have the security and issues solved  
     -  (Mike)
 # Group description goal for sprintOne
-  - How goal was accomplished  
-  - Explanation of bugs or issues  
-  - Explanation of security issues that were discovered  
+  ## What to think about for the overall project
+     Explanation of bugs or issues  
+     Explanation of security issues that were discovered
+     Educate the user for their vulnerability
+     Provide link to the instructions on how to update your software or hardware  
+     Know the model number and put it on the table
+     Your mom's perspective on devices
 
   - Giving awareness to users who have smart devices and see if they have vulnerabilities  
     - shodan, nmaps, powerBI?(UI/UX), python pandas, piHoles (list out templates), massscan, port forwarding, public IP vulnerabilities, get my ip ---> shodan, zenmap etc.  
