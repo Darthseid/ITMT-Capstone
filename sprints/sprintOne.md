@@ -6,6 +6,7 @@
     - In charge of sprint reports
     - Watch over all members works and progress
     - Do minor development coding  
+    - Create database, mysql/mongoDB, and list the different devices we will use  
  - Michael Kotlyar  
     - Cyber security
     - Design outline app process and functions
@@ -46,8 +47,16 @@
     - Responsive to mobile(camera barcode) and web app  
     - Review python  
 # Future goals for SprintTwo
+    - Have data collected for certain scenerios
+    - Rough draft of the ui created
+    - Small bit of the backend code running
+    - Have a backend created but not connected with program
+    - have security measures tested lightly
+    - Tests out all of the different outsource programs that will be used
 # Member comments of accomplishments and description (Refer to sources)
   - Jorell Socorro  
+    - I was able to set up all of the team building software to keep up with organization
+    - Communicating with the members was practiced on the first Sprint
   - Michael Kotlyar  
   - Amairani Lopez  
   - Jared McVey  
