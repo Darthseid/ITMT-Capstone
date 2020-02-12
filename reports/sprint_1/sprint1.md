@@ -43,8 +43,8 @@
 
 # Developer Report
 
-## Sample code from the developer is on his private repo
-   ### https://github.com/Darthseid/ITMT-Capstone/tree/master/Project_Examples
+### Sample code from the developer is on his private repo
+ https://github.com/Darthseid/ITMT-Capstone/tree/master/Project_Examples
 
 # IT Infrastructure Report: Jorell Socorro
 
@@ -70,7 +70,7 @@
    
 
 # User Story Diagram
-![](/diagrams/user_story.PNG)
+![](/reports/sprint_1//diagrams/user_story.PNG)
 ### User steps
    - User enters home page 
       - There are three choices
@@ -82,7 +82,7 @@
             -  Goes to a live feed on recent security technology news
          -  Top left corner are personal user warnings that was received and solved
 # Admin Story Diagram
-![](/diagrams/admin_story_diagram.PNG)  
+![](/reports/sprint_1/diagrams/admin_story_diagram.PNG)  
 
 
 # Atomic Goals for Sprint-02
