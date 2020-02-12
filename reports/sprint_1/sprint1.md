@@ -70,8 +70,19 @@
    
 
 # User Story Diagram
-![](/reports/sprint_1//diagrams/user_story.PNG)
-### User steps
+![](/reports/sprint_1/diagrams/website_user.PNG)
+### User steps for Website
+   - Simple layout for website
+      -  Three different tabs for different pages
+         -  Tech news
+            -  Show user about different security news that have occurred
+         -  History
+            -  Show the history of user warnings or solved
+         -  Vulnerbility Page
+            -  User can scan the network devices are part of or can specifically find device through device model
+            
+![](/reports/sprint_1/diagrams/user_story.PNG)
+### User steps for Mobile
    - User enters home page 
       - There are three choices
          - Scan network
