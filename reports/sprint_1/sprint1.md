@@ -72,6 +72,15 @@
    
 
 # User Story Diagram
+## User Story on Product
+   -  User opens the device and plugs in to the router of home network
+   -  After getting the device setup it will grab the software of pi-hole that will set a base of how it will grab different devices within the network
+   -  Device is setup and will have a small screen that will show a ip address
+   -  User will put that ip address into a web broswer from the phone or laptop
+   -  A login screen will appear for user security
+   -  After signing in, the diagram provided from here, will be what the user will see and do
+   -  Both mobile and website have similar steps, this is for the user that bought the product
+
 ![](/reports/sprint_1/diagrams/website_user.PNG)
 ### User steps for Website
 ## What a user would do
