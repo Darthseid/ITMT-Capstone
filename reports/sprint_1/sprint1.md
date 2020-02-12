@@ -70,7 +70,17 @@
    
 
 # User Story Diagram
-
+![](/diagrams/user_story.PNG)
+### User steps
+   - User enters home page 
+      - There are three choices
+         - Scan network
+            -  Goes to a page that shows the user different devices with vulnerbilities
+         - Scan Code
+            -  Goes to a camera that will scan a barcode that will show the device's vulnerbility
+         - Tech News
+            -  Goes to a live feed on recent security technology news
+         -  Top left corner are personal user warnings that was received and solved
 # Admin Story Diagram
 ![](/diagrams/admin_story_diagram.PNG)  
 
