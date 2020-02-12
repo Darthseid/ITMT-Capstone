@@ -44,7 +44,7 @@
 # Developer Report
 
 ## Sample code from the developer is on his private repo
-   ### https://github.com/illinoistech-itm/jmcvey1
+   ### https://github.com/Darthseid/ITMT-Capstone/tree/master/Project_Examples
 
 # IT Infrastructure Report: Jorell Socorro
 
