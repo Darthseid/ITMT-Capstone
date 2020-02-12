@@ -24,9 +24,24 @@
     - Primarily use python to work
     - Will keep communication with security and Frontend
 
-## UI/UX Report
-
-Write about what you provided during the first sprint, ex. you made diagrams, started on ui/ux planning.
+## UI/UX Report: Amairani Lopez
+ -Mock Up on White board
+   - Did several sketches on what we wanted the product to look like 
+   - Came up with final sketch version on Mobile and Website
+   - Came up with several trials of App names 
+ -Mock Up Online
+   - Designed all main mobile pages through a graphic design program
+		- Home Page
+		- Profile
+		- Scan Code pg
+		- Scan Network Mock up
+		- News event Mock Up
+   - Designed all Website pages 
+		- Home Page (Latest news events)
+		- History Page (Solved Issues, Pending issues)
+		- Scan Page (Scan Network/ Find Product)
+		- Vulnerabilities Results Page
+	- Made a PowerPoint with the Mock Ups to represent the product
 
 ## Developer Report
 
