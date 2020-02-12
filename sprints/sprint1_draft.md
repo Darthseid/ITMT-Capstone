@@ -69,3 +69,14 @@ Start thinking about as many security assumptions you can come up with
 List atomic goals here in ordered list, minimum 3 per category
 
 ### UI/UX 
+- Test out UI/UX 
+	- Use Power point mock up to test with friends and acquaintances and modify user experience
+    - Use the feedback to improve and show some interactive designs
+- Start interactive mobile experience with mock ups using Android Studios
+	- Learn how to connect python with Android Studios 
+	- Have some main pages ready for test
+- Start interactive web site experience using HTML & CSS
+	- Learn how to connect python back end with HTML & CSS 
+	- Have at least the core pages ready with HTML
+   
+
