@@ -43,7 +43,8 @@
 
 # Developer Report
 
-Create a small program that has functions that pull data and push it towards a .txt file
+## Sample code from the developer is on his private repo
+   ### https://github.com/illinoistech-itm/jmcvey1
 
 # IT Infrastructure Report: Jorell Socorro
 
@@ -56,7 +57,17 @@ Create a small program that has functions that pull data and push it towards a .
 
 # Developer and Security Assumptions: Mike Kotlyar
 
-Start thinking about as many security assumptions you can come up with
+- Two assumptions for security:
+   - Outdated Software
+      - Find devices that have outdated software that will show up in a scan
+      - Checking the model number to see if any company still keeps things updated
+   - Enable services
+      - Provide services for the outdated software or give advice on how to handle it 
+   - Default user/password
+      - How easy it is to grab the admin password and user to access the desktop
+   - Network work arounds
+      - port forwarding to see if it is able to access lets say, smartcam, through the network it is connected to
+   
 
 # User Story Diagram
 
@@ -64,11 +75,21 @@ Start thinking about as many security assumptions you can come up with
 ![](/diagrams/admin_story_diagram.PNG)  
 
 
-## Atomic Goals for Sprint-02
+# Atomic Goals for Sprint-02
 
-List atomic goals here in ordered list, minimum 3 per category
+## Project Manager
+- Ask for each member's phone numbers since slack is more of a social app
+- Use the browser organization for tasks more
+- Set up a schedule to meet more than once a week which is lab time
 
-### UI/UX 
+## IT Infrastructure
+- Obtaining all of the devices for the upcoming sprint
+   - Once devices have been obtained will setup with networks
+- Finally deciding a database and cooperate with the developer
+   - Database between mongoDB or mysql 
+- Webcam should be the first device to be tested if it was located in the nmaps
+
+## UI/UX 
 - Test out UI/UX 
 	- Use Power point mock up to test with friends and acquaintances and modify user experience
     - Use the feedback to improve and show some interactive designs
@@ -79,4 +100,16 @@ List atomic goals here in ordered list, minimum 3 per category
 	- Learn how to connect python back end with HTML & CSS 
 	- Have at least the core pages ready with HTML
    
+## Developer
+   - Test the sample program that was created that is related to our project
+      - url to the repository to test out the program is linked in this readme
+   - will be using IDLE to test out the program
+   - Once completed will cooperate with the IT infrastructure for the backend database
+      - Hopefully will create a basic structure on how the backend should look like, a sample image of backend is already uploaded
 
+## Cyber Security 
+   - Provide more information on different situations that relates to vulnerable devices
+      - many articles that will be used to display when a user is using the program
+   - Run different tests to see how vulnerable the devices are shown in the open source programs like nmaps
+      - after running tests come up with different solutions to fix certain vulnerbilities
+   - Test out the two different assumptions that was mentioned here in the first sprint
