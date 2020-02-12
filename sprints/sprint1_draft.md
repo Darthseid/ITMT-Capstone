@@ -36,11 +36,10 @@ Create a small program that has functions that pull data and push it towards a .
 
 - Choose between mongoDB or mysql database 
 - List all devices we will test on
-    - Item1
-    - Item2
-    - Item3
-    - Item4
-    - Item5
+    - Webcam provided by professor
+    - Virtual machines to create server
+    - Old model laptops provided by professor
+    - Cell Phone devices
 
 ## Developer and Security Assumptions
 
@@ -55,3 +54,5 @@ Start thinking about as many security assumptions you can come up with
 ## Atomic Goals for Sprint-02
 
 List atomic goals here in ordered list, minimum 3 per category
+
+### UI/UX 
