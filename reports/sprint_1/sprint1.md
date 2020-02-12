@@ -57,7 +57,8 @@
 
 # Developer and Security Assumptions: Mike Kotlyar
 
-- Two assumptions for security:
+- Assumptions for security:
+   - Old or legacy devices that are slow,due to:
    - Outdated Software
       - Find devices that have outdated software that will show up in a scan
       - Checking the model number to see if any company still keeps things updated
@@ -66,7 +67,8 @@
    - Default user/password
       - How easy it is to grab the admin password and user to access the desktop
    - Network work arounds
-      - port forwarding to see if it is able to access lets say, smartcam, through the network it is connected to
+      - port forwarding or public facing ports to see if it is able to access lets say, smartcam, through the network it is connected to
+
    
 
 # User Story Diagram
@@ -108,7 +110,8 @@
    - Once devices have been obtained will setup with networks
 - Finally deciding a database and cooperate with the developer
    - Database between mongoDB or mysql 
-- Webcam should be the first device to be tested if it was located in the nmaps
+- Webcam should be the first device to be tested if it was located in the nmap
+- Check old software of streaming devices
 
 ## UI/UX 
 - Test out UI/UX 
@@ -134,3 +137,5 @@
    - Run different tests to see how vulnerable the devices are shown in the open source programs like nmaps
       - after running tests come up with different solutions to fix certain vulnerbilities
    - Test out the two different assumptions that was mentioned here in the first sprint
+   - Check against default credentials or ports that are open to attack vectors
+
