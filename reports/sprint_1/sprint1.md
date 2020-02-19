@@ -72,8 +72,25 @@
    
 
 # User Story Diagram
+## User Story on Product
+   -  User opens the device and plugs in to the router of home network
+   -  After getting the device setup it will grab the software of pi-hole that will set a base of how it will grab different devices within the network
+   -  Device is setup and will have a small screen that will show a ip address
+   -  User will put that ip address into a web broswer from the phone or laptop
+   -  A login screen will appear for user security
+   -  After signing in, the diagram provided from here, will be what the user will see and do
+   -  Both mobile and website have similar steps, this is for the user that bought the product
+
 ![](/reports/sprint_1/diagrams/website_user.PNG)
 ### User steps for Website
+## What a user would do
+   -  User will go to the website
+      -  User will go to the different tabs to learn about vulnerable devices
+      -  User might go and check out if their own devices may have been solved 
+      -  User can access their devices by two ways
+         -  One is to click on scan network and will go into their network and scan the devices that are connected to your network and will navigate to a new page that will show devices and vulnerbility
+         -  Second if you do not want to scan your device with your network, just fillout the form and find the specific device that you may have and get a general explanation if that device is vulnerable
+
    - Simple layout for website
       -  Three different tabs for different pages
          -  Tech news
@@ -82,18 +99,22 @@
             -  Show the history of user warnings or solved
          -  Vulnerbility Page
             -  User can scan the network devices are part of or can specifically find device through device model
-            
+
 ![](/reports/sprint_1/diagrams/user_story.PNG)
 ### User steps for Mobile
-   - User enters home page 
-      - There are three choices
-         - Scan network
-            -  Goes to a page that shows the user different devices with vulnerbilities
-         - Scan Code
-            -  Goes to a camera that will scan a barcode that will show the device's vulnerbility
-         - Tech News
-            -  Goes to a live feed on recent security technology news
-         -  Top left corner are personal user warnings that was received and solved
+## What the user does first
+   -  Go to app store or google play to download the application
+      -  Once user opens application the app will kindly ask to link the app to your network, similar to connecting a google home to the network
+      -  User must create an account that will be connected with their home network to provide more of a security so no one can scan people's networks
+      -  After connected it will navigate to the home page and the user can start using the application
+   - There are three choices
+      - Scan network
+         -  Goes to a page that shows the user different devices with vulnerbilities
+      - Scan Code
+         -  Goes to a camera that will scan a barcode that will show the device's vulnerbility
+      - Tech News
+         -  Goes to a live feed on recent security technology news
+      -  Top left corner are personal user warnings that was received and solved
 # Admin Story Diagram
 ![](/reports/sprint_1/diagrams/admin_story_diagram.PNG)  
 
