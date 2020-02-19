@@ -4,6 +4,12 @@
 
 #what to do
 
+#get requirements needed for install
+getRequirements(){
+    sudo apt install nmap -y
+}
+
+
 #get device IP adress
 
 getIP(){
@@ -15,8 +21,9 @@ getIP(){
 
 getInterface(){
     echo "Interface name is"
-    myInterface = "ip -o -f inet addr show | awk '/scope global/ {print $2}')"
+    myInterface="$(ip -o -f inet addr show | awk '/scope global/ {print $2}')"
     echo $myInterface
+    echo
 }
 
 #getsubnet mask
