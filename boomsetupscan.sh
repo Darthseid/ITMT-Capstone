@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 #automated enumeration
 #this script should perform automated scans by pulling network info from DHCP
 
@@ -21,7 +21,7 @@ getIP(){
 
 getInterface(){
     echo "Interface name is"
-    myInterface="$(ip -o -f inet addr show | awk '/scope global/ {print $2}')"
+    myInterface="$ip -o -f inet addr show | awk '/scope global/ {print $2}')"
     echo $myInterface
     echo
 }
@@ -44,28 +44,16 @@ getSubnet(){
 ScanMySubnet(){
     echo 
     echo "Scanning Subnet"
-    nmap $mySubnet -sC -A --open -oX scannedlist.xml 
+    sudo nmap $mySubnet -sC -A --open -oX scannedlist.xml 
 }
 
-CheckShodan()
-{
-    echo "Checking IP in Shodan"
-    shodan host $myIP
-}
+##
+##CheckShodan()
+##{
+##    echo "Checking IP in Shodan"
+##    shodan host $myIP
+##}
 
-
-#Caputre  NTLM hashes within the network
-#This may break the network
-#please be careful
-
-CheckNTLMHashes(){
-    echo "Are there Computers connected to the network with the following:"
-    echo "Windows with File Sharing Enabled? "
-    echo "1. Yes"
-    echo "2. No"
-    read ""
-    #responder -eth0 -wrf
-}
 
 Output(){
     getIP
