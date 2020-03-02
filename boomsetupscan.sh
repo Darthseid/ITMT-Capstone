@@ -14,7 +14,7 @@ if [ "$EUID" -ne 0 ]
 fi
 
 
-#get device IP adress
+#Display device IP adress from DHCP
 
 getIP(){
     echo IP address is
@@ -22,6 +22,9 @@ getIP(){
     echo $myIP
     echo
 }
+
+
+#Disply the Router IP Address
 
 getGateway(){
     echo "Default Gateway is"
@@ -41,6 +44,7 @@ getSubnet(){
 }
 
 
+#Get device interface name for Network connection
 getInterface(){
     echo "Interface name is"
     myInterface="$(ip -o -f inet addr show | awk '/scope global/ {print $2}')"
@@ -58,12 +62,6 @@ ScanMySubnet(){
     sudo nmap $mySubnet -sC -A --open -oX scannedlist.xml 
 }
 
-##
-##CheckShodan()
-##{
-##    echo "Checking IP in Shodan"
-##    shodan host $myIP
-##}
 
 
 Output(){
@@ -73,7 +71,6 @@ Output(){
     getGateway
     getSubnet   
     ScanMySubnet
-    #CheckShodan
 }
 
 
