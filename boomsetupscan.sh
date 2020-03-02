@@ -5,9 +5,13 @@
 #what to do
 
 #get requirements needed for install
-getRequirements(){
-    sudo apt install nmap -y
-}
+
+## Check if root user
+CheckRoot()
+if [ "$EUID" -ne 0 ]
+  then echo "Operation Requires Root. Please run again using 'sudo'"
+  exit
+fi
 
 
 #get device IP adress
@@ -19,23 +23,30 @@ getIP(){
     echo
 }
 
-getInterface(){
-    echo "Interface name is"
-    myInterface="$ip -o -f inet addr show | awk '/scope global/ {print $2}')"
-    echo $myInterface
+getGateway(){
+    echo "Default Gateway is"
+    myGateway="$(ip r | awk '/default via/ {print $3}')"
+    echo $myGateway
     echo
 }
+
 
 #getsubnet mask
 #Helps identify scope of the network
 getSubnet(){
     echo "subnet mask is"
     mySubnet="$(ip -o -f inet addr show | awk '/scope global/ {print $4}')"
-    echo $mySubnet 
+    echo $mySubnet
+    echo
 }
 
 
-
+getInterface(){
+    echo "Interface name is"
+    myInterface="$(ip -o -f inet addr show | awk '/scope global/ {print $2}')"
+    echo $myInterface
+    echo
+}
 
 #Perform a scripted network scan to find devices
 #Identify Open Ports
@@ -56,9 +67,11 @@ ScanMySubnet(){
 
 
 Output(){
+    CheckRoot
+    getInterface  
     getIP
-    getInterface
-    getSubnet
+    getGateway
+    getSubnet   
     ScanMySubnet
     #CheckShodan
 }
