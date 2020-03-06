@@ -78,7 +78,7 @@ What the developer had to do for this sprint was to get used to python and see h
 ![](/reports/sprint_2/images/progressD4.PNG)
 ![](/reports/sprint_2/images/progressD5.PNG)
 
-### ***All code inside of the sprint_2/Conversion_Code and to see the scan shell and filter, look into /Code is the code to look at***
+### ***All code inside of the sprint_2/Conversion_Code and to see the scan shell and filter, look into /Code is the folder to look at***
 
 
 ## IT Infrastructure Report
