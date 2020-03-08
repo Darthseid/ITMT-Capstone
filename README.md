@@ -37,8 +37,8 @@ It is designed with a focus on IoT Devices found in a "Smart Home" for home auto
 |-----|-----|-----|
 |Michael Kotlyar |mkotlyar@hawk.iit.edu |kotIIT|
 |Amairani Lopez |alopez21@hawk.iit.edu |jorell|
-|Jared McVey | jmcvey1@hawk.iit.edu  ||
-|Jorell Socorro | jsocorro@hawk.iit.edu ||
+|Jared McVey | jmcvey1@hawk.iit.edu  |Darthseid|
+|Jorell Socorro | jsocorro@hawk.iit.edu |AmairaniL|
 
 ## Contribution
 
