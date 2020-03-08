@@ -15,10 +15,11 @@ This is compatible with Debian/Ubuntu
 
 ----
 
-Contribution
+### Contribution
+
 (As of March 8)
 
 |Lines| User|
 |---|---|
 |1555 | kotIIT|
-|12 |Darthseid|
+|12 | Darthseid |
