@@ -1,0 +1,1420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--generated with nmap.xsl - version 0.9c by Benjamin Erb - http://www.benjamin-erb.de/nmap_xsl.php --><style type="text/css">
+/* stylesheet print */
+@media print
+{
+  #menu {
+    display:none;
+  }
+
+  body {
+    font-family: Verdana, Helvetica, sans-serif;
+  }
+  
+  h1 {
+    font-size: 13pt;
+    font-weight:bold;
+    margin:4pt 0pt 0pt 0pt;
+    padding:0;
+  }
+
+  h2 {
+    font-size: 12pt;
+    font-weight:bold;
+    margin:3pt 0pt 0pt 0pt;
+    padding:0;
+  }
+
+  h3, a:link, a:visited {
+    font-size: 9pt;
+    font-weight:bold;
+    margin:1pt 0pt 0pt 20pt;
+    padding:0;
+    text-decoration: none;
+    color: #000000;
+  }
+
+  p,ul {
+    font-size: 9pt;
+    margin:1pt 0pt 8pt 40pt;
+    padding:0;
+    text-align:left;
+  }
+
+  li {
+    font-size: 9pt;
+    margin:0;
+    padding:0;
+    text-align:left;
+  }
+
+  table {
+    margin:1pt 0pt 8pt 40pt;
+    border:0px;
+    width:90%
+  }
+
+  td {
+    border:0px;
+    border-top:1px solid black;
+    font-size: 9pt;
+  }
+
+  .head td {
+    border:0px;
+    font-weight:bold;
+    font-size: 9pt;
+  }
+  .noprint { display: none; }
+}
+
+/* stylesheet screen */
+@media screen
+{
+  body {
+    font-family: Verdana, Helvetica, sans-serif;
+    margin: 0px;
+    background-color: #FFFFFF;
+    color: #000000;
+    text-align: center;
+  }
+
+  #container {
+    text-align:left;
+    margin: 10px auto;
+    width: 90%;
+  }
+
+  h1 {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-weight:bold;
+    font-size: 14pt;
+    color: #FFFFFF;
+    background-color:#2A0D45;
+    margin:10px 0px 0px 0px;
+    padding:5px 4px 5px 4px;
+    width: 100%;
+    border:1px solid black;
+    text-align: left;
+  }
+
+  h2 {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-weight:bold;
+    font-size: 11pt;
+    color: #000000;
+    margin:30px 0px 0px 0px;
+    padding:4px;
+    width: 100%;
+    background-color:#F0F8FF;
+    text-align: left;
+  }
+
+  h2.green {
+    color: #000000;
+    background-color:#CCFFCC;
+    border-color:#006400;
+  }
+
+  h2.red {
+    color: #000000;
+    background-color:#FFCCCC;
+    border-color:#8B0000;
+  }
+   
+  h3 {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-weight:bold;
+    font-size: 10pt;
+    color:#000000;
+    background-color: #FFFFFF;
+    width: 75%;
+    text-align: left;
+  }
+
+  p {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 8pt;
+    color:#000000;
+    background-color: #FFFFFF;
+    width: 75%;
+    text-align: left;
+  }
+
+  p i {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 8pt;
+    color:#000000;
+    background-color: #CCCCCC;
+  }
+
+  ul {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 8pt;
+    color:#000000;
+    background-color: #FFFFFF;
+    width: 75%;
+    text-align: left;
+  }
+
+  a {
+    font-family: Verdana, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 8pt;
+    color:#000000;
+    font-weight:bold;
+    background-color: #FFFFFF;
+    color: #000000;
+  }
+
+  li a {
+    font-family: Verdana, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 10pt;
+    color:#000000;
+    font-weight:bold;
+    background-color: #FFFFFF;
+    color: #000000;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  a.up {
+      color:#006400;
+  }
+
+  table {
+    width: 80%;
+    border:0px;
+    color: #000000;
+    background-color: #000000;
+    margin:10px;
+  }
+
+  tr {
+    vertical-align:top;
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 8pt;
+    color:#000000;
+    background-color: #FFFFFF;
+  }
+
+  tr.head {
+    background-color: #E1E1E1;
+    color: #000000;
+    font-weight:bold;
+  }
+
+  tr.open {
+    background-color: #CCFFCC;
+    color: #000000;
+  }
+	
+  tr.script {
+    background-color: #EFFFF7;
+    color: #000000;
+  }
+
+  tr.filtered {
+    background-color: #F2F2F2;
+    color: #000000;
+  }
+
+  tr.closed {
+    background-color: #F2F2F2;
+    color: #000000;
+  }
+    
+  td {
+    padding:2px;
+  }
+        
+  #menu li {
+    display         : inline;
+    margin          : 0;
+    /*margin-right    : 10px;*/
+    padding         : 0;
+    list-style-type : none;
+  }    
+ 
+  #menubox {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    width: 120px;
+  }
+  
+  
+  
+  /* This section handle's IE's refusal to honor the fixed CSS attribute */
+  
+  * html div#menubox {
+    position: absolute;
+    top:expression(eval(
+      document.compatMode && document.compatMode=='CSS1Compat') ?
+      documentElement.scrollTop+(documentElement.clientHeight-this.clientHeight) 
+      : document.body.scrollTop +(document.body.clientHeight-this.clientHeight));
+  }
+  /* This fixes the jerky effect when scrolling in IE*/
+  * html,* html body {
+    background: #fff url(nosuchfile) fixed;
+  }
+
+  
+ 
+  .up {
+    color: #000000;
+    background-color:#CCFFCC;
+  }
+  
+  .down {
+    color:#626262;
+    background-color: #F2F2F2;
+  }
+
+  .print_only { display: none; }
+  .hidden { display: none; }
+  .unhidden { display: block; }
+  
+}
+</style>
+<title>Nmap Scan Report - Scanned at Sat Mar  7 17:31:34 2020</title>
+<script type="text/javascript">
+     
+      
+                
+      function toggle(divID) {
+        var item = document.getElementById(divID);
+        if (item) {
+          item.className=(item.className=='hidden')?'unhidden':'hidden';
+        }
+      }
+           
+      function togglePorts(tableID,portState) {
+        var table = document.getElementById(tableID);    
+        var tbody = table.getElementsByTagName("tbody")[0];
+        var rows = tbody.getElementsByTagName("tr");
+        for (var i=0; i < rows.length; i++) {
+          var value = rows[i].getElementsByTagName("td")[2].firstChild.nodeValue;
+          if (value == portState) {
+            rows[i].style.display = (rows[i].style.display == 'none')?'':'none';
+          }
+        }
+      }
+      
+      function toggleAll(portState) {
+        var allTables = document.getElementsByTagName("table");
+        for (var c=0; c < allTables.length; c++) {
+          if (allTables[c].id != "") {
+            togglePorts(allTables[c].id, portState)
+          }
+        }
+      }
+      
+      function init (){
+        toggleAll('closed');
+        toggleAll('filtered');     
+      }     
+            
+      window.onload = init; 
+      
+      
+    
+    </script>
+</head>
+<body>
+<a name="top"></a><div id="container">
+<h1>Nmap Scan Report - Scanned at Sat Mar  7 17:31:34 2020</h1>
+<ul id="menu">
+<li><a href="#scansummary">Scan Summary</a></li>
+<li> | <a href="#host_10_0_0_1" class="up">www.routerlogin.com (10.0.0.1)
+                  </a>
+</li>
+<li> | <a href="#host_10_0_0_3" class="up">10.0.0.3</a>
+</li>
+<li> | <a href="#host_10_0_0_6" class="up">10.0.0.6</a>
+</li>
+<li> | <a href="#host_10_0_0_7" class="up">10.0.0.7</a>
+</li>
+<li> | <a href="#host_10_0_0_12" class="up">10.0.0.12</a>
+</li>
+<li> | <a href="#host_10_0_0_23" class="up">10.0.0.23</a>
+</li>
+<li> | <a href="#host_10_0_0_24" class="up">10.0.0.24</a>
+</li>
+</ul>
+<a name="scansummary"></a><hr class="print_only">
+<h2>Scan Summary</h2>
+<p>
+      Nmap 7.80 was initiated at Sat Mar  7 17:31:34 2020 with these arguments:<br><i>nmap -sC -A --open -oX scannedlist.xml 10.0.0.24/24</i><br></p>
+<p>
+    Verbosity: 0; Debug level 0</p>
+<p>Nmap done at Sat Mar  7 17:35:37 2020; 256 IP addresses (11 hosts up) scanned in 243.63 seconds</p>
+<hr class="print_only">
+<a name="host_10_0_0_1"></a><h2 class="up">10.0.0.1 / www.routerlogin.com<span class="print_only">(online)</span>
+</h2>
+<div id="hostblock_10.0.0.1" class="unhidden">
+<h3>Address</h3>
+<ul>
+<li>10.0.0.1
+            (ipv4)
+          </li>
+<li>CC:40:D0:A6:D1:01 - Netgear 
+            (mac)
+          </li>
+</ul>
+
+
+<h3>Hostnames</h3>
+<ul>
+<li>www.routerlogin.com (PTR)</li>
+</ul>
+<h3>Ports</h3>
+<p>The 995 ports scanned but not shown below are in state: <b>closed</b></p>
+<ul><li><p>995 ports replied with: <b>resets</b></p></li></ul>
+<table id="porttable_10.0.0.1" cellspacing="1">
+<tr class="head">
+<td colspan="2">Port</td>
+<td>State 
+          <a href="javascript:togglePorts('porttable_10.0.0.1','closed');"><span class="noprint"><small> (toggle closed [0] </small></span></a><a href="javascript:togglePorts('porttable_10.0.0.1','filtered');"><span class="noprint"><small> | filtered [0])</small></span></a>
+</td>
+<td>Service</td>
+<td>Reason</td>
+<td>Product</td>
+<td>Version</td>
+<td>Extra info</td>
+</tr>
+
+
+<tr class="open">
+<td>53</td>
+<td>tcp</td>
+<td>open</td>
+<td>domain </td>
+<td>syn-ack</td>
+<td>ISC BIND </td>
+<td>9.10.3-P4 </td>
+<td>Raspbian Linux </td>
+</tr>
+<tr class="script">
+<td></td>
+<td>dns-nsid </td>
+<td colspan="6"><pre>
+  bind.version: 9.10.3-P4-Raspbian </pre></td>
+</tr>
+<tr class="open">
+<td>80</td>
+<td>tcp</td>
+<td>open</td>
+<td>http </td>
+<td>syn-ack</td>
+<td>mini_httpd </td>
+<td>1.24 10May2016 </td>
+<td> </td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-auth </td>
+<td colspan="6"><pre>
+HTTP/1.1 401 Unauthorized
+  Basic realm=NETGEAR R6120
+ </pre></td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-cookie-flags </td>
+<td colspan="6"><pre>
+  /: 
+    sessionid: 
+      httponly flag not set </pre></td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-title </td>
+<td colspan="6"><pre> Authorization warning </pre></td>
+</tr>
+<tr class="open">
+<td>5000</td>
+<td>tcp</td>
+<td>open</td>
+<td>http </td>
+<td>syn-ack</td>
+<td>mini_httpd </td>
+<td>1.24 10May2016 </td>
+<td> </td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-auth </td>
+<td colspan="6"><pre>
+HTTP/1.1 401 Unauthorized
+  Basic realm=NETGEAR R6120
+ </pre></td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-cookie-flags </td>
+<td colspan="6"><pre>
+  /: 
+    sessionid: 
+      httponly flag not set </pre></td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-title </td>
+<td colspan="6"><pre>200 OK </pre></td>
+</tr>
+<tr class="open">
+<td>7777</td>
+<td>tcp</td>
+<td>open</td>
+<td>upnp </td>
+<td>syn-ack</td>
+<td>MiniUPnP </td>
+<td>1.6 </td>
+<td>Netgear SDK 4.3.0.0; UPnP 1.0 </td>
+</tr>
+<tr class="open">
+<td>20005</td>
+<td>tcp</td>
+<td>open</td>
+<td>btx </td>
+<td>syn-ack</td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+</table>
+<h3>Remote Operating System Detection</h3>
+<ul>
+<li>Used port: <b>53/tcp</b> (<b>open</b>)  </li>
+<li>Used port: <b>1/tcp</b> (<b>closed</b>)  </li>
+<li>Used port: <b>43400/udp</b> (<b>closed</b>)  </li>
+<li>OS match: <b>Linux 2.6.17 - 2.6.36</b> (<b>100%</b>)</li>
+</ul>
+
+
+
+
+
+
+
+<br><a href="javascript:toggle('metrics_10.0.0.1');">
+    Misc Metrics <span class="noprint"><small> (click to expand)</small></span></a><div id="metrics_10.0.0.1" class="hidden"><table cellspacing="1">
+<tr class="head">
+<td>Metric</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>Ping Results</td>
+<td>arp-response</td>
+</tr>
+<tr>
+<td>System Uptime</td>
+<td>526392 seconds  (last reboot: Sun Mar  1 15:22:24 2020)
+        </td>
+</tr>
+<tr>
+<td>Network Distance</td>
+<td>1 hops</td>
+</tr>
+<tr>
+<td>TCP Sequence Prediction</td>
+<td>Difficulty=200 (Good luck!)</td>
+</tr>
+<tr>
+<td>IP ID Sequence Generation</td>
+<td>All zeros</td>
+</tr>
+</table></div>
+</div>
+<hr class="print_only">
+<a name="host_10_0_0_3"></a><h2 class="up">10.0.0.3<span class="print_only">(online)</span>
+</h2>
+<div id="hostblock_10.0.0.3" class="unhidden">
+<h3>Address</h3>
+<ul>
+<li>10.0.0.3
+            (ipv4)
+          </li>
+<li>F4:39:09:69:A6:1B - Hewlett Packard 
+            (mac)
+          </li>
+</ul>
+
+
+
+<h3>Ports</h3>
+<p>The 993 ports scanned but not shown below are in state: <b>closed</b></p>
+<ul><li><p>993 ports replied with: <b>resets</b></p></li></ul>
+<table id="porttable_10.0.0.3" cellspacing="1">
+<tr class="head">
+<td colspan="2">Port</td>
+<td>State 
+          <a href="javascript:togglePorts('porttable_10.0.0.3','closed');"><span class="noprint"><small> (toggle closed [0] </small></span></a><a href="javascript:togglePorts('porttable_10.0.0.3','filtered');"><span class="noprint"><small> | filtered [0])</small></span></a>
+</td>
+<td>Service</td>
+<td>Reason</td>
+<td>Product</td>
+<td>Version</td>
+<td>Extra info</td>
+</tr>
+
+
+<tr class="open">
+<td>80</td>
+<td>tcp</td>
+<td>open</td>
+<td>http </td>
+<td>syn-ack</td>
+<td>HP OfficeJet Pro 8710 printer http config </td>
+<td> </td>
+<td>Serial CN8ACDT1KY </td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-methods </td>
+<td colspan="6"><pre>
+  Potentially risky methods: PUT DELETE </pre></td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-robots.txt </td>
+<td colspan="6"><pre>1 disallowed entry 
+/ </pre></td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-server-header </td>
+<td colspan="6"><pre>HP HTTP Server; HP HP OfficeJet Pro 8710 - M9L66A; Serial Number: CN8ACDT1KY; Built:Tue Aug 07, 2018 11:04:59AM {WBP2CN1832BR} </pre></td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-title </td>
+<td colspan="6"><pre>Site doesn't have a title (text/html). </pre></td>
+</tr>
+<tr class="open">
+<td>443</td>
+<td>tcp</td>
+<td>open</td>
+<td>http </td>
+<td>syn-ack</td>
+<td>HP OfficeJet Pro 8710 printer http config </td>
+<td> </td>
+<td>Serial CN8ACDT1KY </td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-methods </td>
+<td colspan="6"><pre>
+  Potentially risky methods: PUT DELETE </pre></td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-robots.txt </td>
+<td colspan="6"><pre>1 disallowed entry 
+/ </pre></td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-server-header </td>
+<td colspan="6"><pre>HP HTTP Server; HP HP OfficeJet Pro 8710 - M9L66A; Serial Number: CN8ACDT1KY; Built:Tue Aug 07, 2018 11:04:59AM {WBP2CN1832BR} </pre></td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-title </td>
+<td colspan="6"><pre>Site doesn't have a title (text/html). </pre></td>
+</tr>
+<tr class="script">
+<td></td>
+<td>ssl-cert </td>
+<td colspan="6"><pre>Subject: commonName=HP69A619/organizationName=HP/stateOrProvinceName=Washington/countryName=US
+Not valid before: 2018-08-07T11:04:59
+Not valid after:  2028-08-04T11:04:59 </pre></td>
+</tr>
+<tr class="open">
+<td>515</td>
+<td>tcp</td>
+<td>open</td>
+<td>printer </td>
+<td>syn-ack</td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr class="open">
+<td>631</td>
+<td>tcp</td>
+<td>open</td>
+<td>http </td>
+<td>syn-ack</td>
+<td>HP OfficeJet Pro 8710 printer http config </td>
+<td> </td>
+<td>Serial CN8ACDT1KY </td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-methods </td>
+<td colspan="6"><pre>
+  Potentially risky methods: PUT DELETE </pre></td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-robots.txt </td>
+<td colspan="6"><pre>1 disallowed entry 
+/ </pre></td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-server-header </td>
+<td colspan="6"><pre>HP HTTP Server; HP HP OfficeJet Pro 8710 - M9L66A; Serial Number: CN8ACDT1KY; Built:Tue Aug 07, 2018 11:04:59AM {WBP2CN1832BR} </pre></td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-title </td>
+<td colspan="6"><pre>Site doesn't have a title (text/html). </pre></td>
+</tr>
+<tr class="open">
+<td>8080</td>
+<td>tcp</td>
+<td>open</td>
+<td>http </td>
+<td>syn-ack</td>
+<td>HP OfficeJet Pro 8710 printer http config </td>
+<td> </td>
+<td>Serial CN8ACDT1KY </td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-methods </td>
+<td colspan="6"><pre>
+  Potentially risky methods: PUT DELETE </pre></td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-robots.txt </td>
+<td colspan="6"><pre>1 disallowed entry 
+/ </pre></td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-server-header </td>
+<td colspan="6"><pre>HP HTTP Server; HP HP OfficeJet Pro 8710 - M9L66A; Serial Number: CN8ACDT1KY; Built:Tue Aug 07, 2018 11:04:59AM {WBP2CN1832BR} </pre></td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-title </td>
+<td colspan="6"><pre>Site doesn't have a title (text/html). </pre></td>
+</tr>
+<tr class="open">
+<td>9100</td>
+<td>tcp</td>
+<td>open</td>
+<td>jetdirect </td>
+<td>syn-ack</td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr class="open">
+<td>9220</td>
+<td>tcp</td>
+<td>open</td>
+<td>hp-gsg </td>
+<td>syn-ack</td>
+<td>HP Generic Scan Gateway </td>
+<td>1.0 </td>
+<td> </td>
+</tr>
+</table>
+<h3>Remote Operating System Detection</h3>
+<ul>
+<li>Used port: <b>80/tcp</b> (<b>open</b>)  </li>
+<li>Used port: <b>1/tcp</b> (<b>closed</b>)  </li>
+<li>Used port: <b>44422/udp</b> (<b>closed</b>)  </li>
+<li>OS match: <b>VxWorks</b> (<b>100%</b>)</li>
+</ul>
+
+
+
+
+
+
+
+<br><a href="javascript:toggle('metrics_10.0.0.3');">
+    Misc Metrics <span class="noprint"><small> (click to expand)</small></span></a><div id="metrics_10.0.0.3" class="hidden"><table cellspacing="1">
+<tr class="head">
+<td>Metric</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>Ping Results</td>
+<td>arp-response</td>
+</tr>
+<tr>
+<td>System Uptime</td>
+<td>667463 seconds  (last reboot: Sat Feb 29 00:11:13 2020)
+        </td>
+</tr>
+<tr>
+<td>Network Distance</td>
+<td>1 hops</td>
+</tr>
+<tr>
+<td>TCP Sequence Prediction</td>
+<td>Difficulty=261 (Good luck!)</td>
+</tr>
+<tr>
+<td>IP ID Sequence Generation</td>
+<td>Busy server or unknown class</td>
+</tr>
+</table></div>
+</div>
+<hr class="print_only">
+<a name="host_10_0_0_6"></a><h2 class="up">10.0.0.6<span class="print_only">(online)</span>
+</h2>
+<div id="hostblock_10.0.0.6" class="unhidden">
+<h3>Address</h3>
+<ul>
+<li>10.0.0.6
+            (ipv4)
+          </li>
+<li>D8:CB:8A:4F:82:9E - Micro-star Intl 
+            (mac)
+          </li>
+</ul>
+
+
+
+<h3>Ports</h3>
+<p>The 997 ports scanned but not shown below are in state: <b>filtered</b></p>
+<ul><li><p>997 ports replied with: <b>no-responses</b></p></li></ul>
+<table id="porttable_10.0.0.6" cellspacing="1">
+<tr class="head">
+<td colspan="2">Port</td>
+<td>State 
+          <a href="javascript:togglePorts('porttable_10.0.0.6','closed');"><span class="noprint"><small> (toggle closed [0] </small></span></a><a href="javascript:togglePorts('porttable_10.0.0.6','filtered');"><span class="noprint"><small> | filtered [0])</small></span></a>
+</td>
+<td>Service</td>
+<td>Reason</td>
+<td>Product</td>
+<td>Version</td>
+<td>Extra info</td>
+</tr>
+
+
+<tr class="open">
+<td>135</td>
+<td>tcp</td>
+<td>open</td>
+<td>msrpc </td>
+<td>syn-ack</td>
+<td>Microsoft Windows RPC </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr class="open">
+<td>139</td>
+<td>tcp</td>
+<td>open</td>
+<td>netbios-ssn </td>
+<td>syn-ack</td>
+<td>Microsoft Windows netbios-ssn </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr class="open">
+<td>445</td>
+<td>tcp</td>
+<td>open</td>
+<td>microsoft-ds </td>
+<td>syn-ack</td>
+<td>Windows 10 Pro 18363 microsoft-ds </td>
+<td> </td>
+<td>workgroup: WORKGROUP </td>
+</tr>
+</table>
+<h3>Remote Operating System Detection</h3>
+<ul>
+<li>Used port: <b>135/tcp</b> (<b>open</b>)  </li>
+<li>OS match: <b>Microsoft Windows XP SP2</b> (<b>87%</b>)</li>
+<li>OS match: <b>Microsoft Windows 7</b> (<b>85%</b>)</li>
+<li>OS match: <b>Microsoft Windows Server 2008 SP1 or Windows Server 2008 R2</b> (<b>85%</b>)</li>
+</ul>
+
+
+
+
+<h3>Host Script Output</h3>
+<table>
+<tr class="head">
+<td>Script Name</td>
+<td>Output</td>
+</tr>
+<tr class="script">
+<td>clock-skew </td>
+<td><pre>mean: 1h59m59s, deviation: 3h27m59s, median: -5s </pre></td>
+</tr>
+<tr class="script">
+<td>nbstat </td>
+<td><pre>NetBIOS name: LIVINGROOM-TIFF, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: d8:cb:8a:4f:82:9e (Micro-star Intl) </pre></td>
+</tr>
+<tr class="script">
+<td>smb-os-discovery </td>
+<td><pre>
+  OS: Windows 10 Pro 18363 (Windows 10 Pro 6.3)
+  OS CPE: cpe:/o:microsoft:windows_10::-
+  Computer name: LIVINGROOM-TIFFBOX
+  NetBIOS computer name: LIVINGROOM-TIFF\x00
+  Workgroup: WORKGROUP\x00
+  System time: 2020-03-07T17:33:32-06:00
+ </pre></td>
+</tr>
+<tr class="script">
+<td>smb-security-mode </td>
+<td><pre>
+  account_used: guest
+  authentication_level: user
+  challenge_response: supported
+  message_signing: disabled (dangerous, but default) </pre></td>
+</tr>
+<tr class="script">
+<td>smb2-security-mode </td>
+<td><pre>
+  2.02: 
+    Message signing enabled but not required </pre></td>
+</tr>
+<tr class="script">
+<td>smb2-time </td>
+<td><pre>
+  date: 2020-03-07T23:33:24
+  start_date: N/A </pre></td>
+</tr>
+</table>
+
+<br><a href="javascript:toggle('metrics_10.0.0.6');">
+    Misc Metrics <span class="noprint"><small> (click to expand)</small></span></a><div id="metrics_10.0.0.6" class="hidden"><table cellspacing="1">
+<tr class="head">
+<td>Metric</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>Ping Results</td>
+<td>arp-response</td>
+</tr>
+<tr>
+<td>Network Distance</td>
+<td>1 hops</td>
+</tr>
+<tr>
+<td>TCP Sequence Prediction</td>
+<td>Difficulty=264 (Good luck!)</td>
+</tr>
+<tr>
+<td>IP ID Sequence Generation</td>
+<td>Incremental</td>
+</tr>
+</table></div>
+</div>
+<hr class="print_only">
+<a name="host_10_0_0_7"></a><h2 class="up">10.0.0.7<span class="print_only">(online)</span>
+</h2>
+<div id="hostblock_10.0.0.7" class="unhidden">
+<h3>Address</h3>
+<ul>
+<li>10.0.0.7
+            (ipv4)
+          </li>
+<li>DC:A6:32:4F:0C:38 - Raspberry Pi Trading 
+            (mac)
+          </li>
+</ul>
+
+
+
+<h3>Ports</h3>
+<p>The 998 ports scanned but not shown below are in state: <b>closed</b></p>
+<ul><li><p>998 ports replied with: <b>resets</b></p></li></ul>
+<table id="porttable_10.0.0.7" cellspacing="1">
+<tr class="head">
+<td colspan="2">Port</td>
+<td>State 
+          <a href="javascript:togglePorts('porttable_10.0.0.7','closed');"><span class="noprint"><small> (toggle closed [0] </small></span></a><a href="javascript:togglePorts('porttable_10.0.0.7','filtered');"><span class="noprint"><small> | filtered [0])</small></span></a>
+</td>
+<td>Service</td>
+<td>Reason</td>
+<td>Product</td>
+<td>Version</td>
+<td>Extra info</td>
+</tr>
+
+
+<tr class="open">
+<td>22</td>
+<td>tcp</td>
+<td>open</td>
+<td>ssh </td>
+<td>syn-ack</td>
+<td>OpenSSH </td>
+<td>7.9p1 Raspbian 10 </td>
+<td>protocol 2.0 </td>
+</tr>
+<tr class="script">
+<td></td>
+<td>ssh-hostkey </td>
+<td colspan="6"><pre>
+  2048 ff:af:48:43:c0:52:dd:7f:ea:7e:fe:d0:d8:b3:e3:cb (RSA)
+  256 97:a4:1f:28:c7:27:3b:e9:f1:dc:bf:a5:cf:df:7c:52 (ECDSA)
+  256 6f:f7:ae:cf:22:e8:f4:3e:29:3f:7a:a1:12:c0:c1:09 (ED25519) </pre></td>
+</tr>
+<tr class="open">
+<td>3389</td>
+<td>tcp</td>
+<td>open</td>
+<td>ms-wbt-server </td>
+<td>syn-ack</td>
+<td>xrdp </td>
+<td> </td>
+<td> </td>
+</tr>
+</table>
+<h3>Remote Operating System Detection</h3>
+<ul>
+<li>Used port: <b>22/tcp</b> (<b>open</b>)  </li>
+<li>Used port: <b>1/tcp</b> (<b>closed</b>)  </li>
+<li>Used port: <b>30175/udp</b> (<b>closed</b>)  </li>
+<li>OS match: <b>Linux 3.2 - 4.9</b> (<b>100%</b>)</li>
+</ul>
+
+
+
+
+
+
+
+<br><a href="javascript:toggle('metrics_10.0.0.7');">
+    Misc Metrics <span class="noprint"><small> (click to expand)</small></span></a><div id="metrics_10.0.0.7" class="hidden"><table cellspacing="1">
+<tr class="head">
+<td>Metric</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>Ping Results</td>
+<td>arp-response</td>
+</tr>
+<tr>
+<td>System Uptime</td>
+<td>1285271 seconds  (last reboot: Fri Feb 21 20:34:25 2020)
+        </td>
+</tr>
+<tr>
+<td>Network Distance</td>
+<td>1 hops</td>
+</tr>
+<tr>
+<td>TCP Sequence Prediction</td>
+<td>Difficulty=250 (Good luck!)</td>
+</tr>
+<tr>
+<td>IP ID Sequence Generation</td>
+<td>All zeros</td>
+</tr>
+</table></div>
+</div>
+<hr class="print_only">
+<a name="host_10_0_0_12"></a><h2 class="up">10.0.0.12<span class="print_only">(online)</span>
+</h2>
+<div id="hostblock_10.0.0.12" class="unhidden">
+<h3>Address</h3>
+<ul>
+<li>10.0.0.12
+            (ipv4)
+          </li>
+<li>D8:F2:CA:7A:E5:40 - Intel Corporate 
+            (mac)
+          </li>
+</ul>
+
+
+
+<h3>Ports</h3>
+<p>The 981 ports scanned but not shown below are in state: <b>closed</b></p>
+<ul><li><p>981 ports replied with: <b>resets</b></p></li></ul>
+<p>The 16 ports scanned but not shown below are in state: <b>filtered</b></p>
+<ul><li><p>16 ports replied with: <b>no-responses</b></p></li></ul>
+<table id="porttable_10.0.0.12" cellspacing="1">
+<tr class="head">
+<td colspan="2">Port</td>
+<td>State 
+          <a href="javascript:togglePorts('porttable_10.0.0.12','closed');"><span class="noprint"><small> (toggle closed [0] </small></span></a><a href="javascript:togglePorts('porttable_10.0.0.12','filtered');"><span class="noprint"><small> | filtered [0])</small></span></a>
+</td>
+<td>Service</td>
+<td>Reason</td>
+<td>Product</td>
+<td>Version</td>
+<td>Extra info</td>
+</tr>
+
+
+
+
+
+<tr class="open">
+<td>5357</td>
+<td>tcp</td>
+<td>open</td>
+<td>http </td>
+<td>syn-ack</td>
+<td>Microsoft HTTPAPI httpd </td>
+<td>2.0 </td>
+<td>SSDP/UPnP </td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-server-header </td>
+<td colspan="6"><pre>Microsoft-HTTPAPI/2.0 </pre></td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-title </td>
+<td colspan="6"><pre>Service Unavailable </pre></td>
+</tr>
+<tr class="open">
+<td>6129</td>
+<td>tcp</td>
+<td>open</td>
+<td>damewaremr </td>
+<td>syn-ack</td>
+<td>DameWare Mini Remote Control </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr class="open">
+<td>8081</td>
+<td>tcp</td>
+<td>open</td>
+<td>blackice-icecap </td>
+<td>syn-ack</td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr class="script">
+<td></td>
+<td>fingerprint-strings </td>
+<td colspan="6"><pre>
+  HTTPOptions: 
+    HTTP/1.1 404 Not Found
+    Content-Type: text/plain; charset=utf-8
+    Content-Length: 13
+    Found </pre></td>
+</tr>
+</table>
+<h3>Remote Operating System Detection</h3>
+<ul>
+<li>Used port: <b>5357/tcp</b> (<b>open</b>)  </li>
+<li>Used port: <b>1/tcp</b> (<b>closed</b>)  </li>
+<li>Used port: <b>40585/udp</b> (<b>closed</b>)  </li>
+<li>OS match: <b>Microsoft Windows Longhorn</b> (<b>95%</b>)</li>
+<li>OS match: <b>Microsoft Windows 10 1703</b> (<b>93%</b>)</li>
+<li>OS match: <b>Microsoft Windows 10 1511</b> (<b>93%</b>)</li>
+<li>OS match: <b>Microsoft Windows Server 2008 R2</b> (<b>93%</b>)</li>
+<li>OS match: <b>Microsoft Windows Server 2008 SP2</b> (<b>93%</b>)</li>
+<li>OS match: <b>Microsoft Windows 7 SP1</b> (<b>93%</b>)</li>
+<li>OS match: <b>Microsoft Windows 8</b> (<b>93%</b>)</li>
+<li>OS match: <b>Microsoft Windows 8.1 Update 1</b> (<b>92%</b>)</li>
+<li>OS match: <b>Microsoft Windows Vista SP1</b> (<b>92%</b>)</li>
+<li>OS match: <b>Microsoft Windows 7 Enterprise SP1</b> (<b>92%</b>)</li>
+</ul>
+<ul><li class="noprint">OS identified but the fingerprint was requested at scan time. 
+          
+        <a href="javascript:toggle('osblock_10.0.0.12');"><span class="noprint"><small> (click to expand)</small></span></a>
+</li></ul>
+<div id="osblock_10.0.0.12" class="hidden"><table class="noprint" cellspacing="1">
+<tr class="head"><td>Operating System fingerprint</td></tr>
+<tr><td><pre>OS:SCAN(V=7.80%E=4%D=3/7%OT=5357%CT=1%CU=40585%PV=Y%DS=1%DC=D%G=Y%M=D8F2CA%
+OS:TM=5E642FC8%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=109%TI=I%CI=I%II=
+OS:I%SS=S%TS=U)OPS(O1=M5B4NW8NNS%O2=M5B4NW8NNS%O3=M5B4NW8%O4=M5B4NW8NNS%O5=
+OS:M5B4NW8NNS%O6=M5B4NNS)WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FF7
+OS:0)ECN(R=Y%DF=Y%T=80%W=FFFF%O=M5B4NW8NNS%CC=N%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S
+OS:+%F=AS%RD=0%Q=)T2(R=Y%DF=Y%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)T3(R=Y%DF=Y%
+OS:T=80%W=0%S=Z%A=O%F=AR%O=%RD=0%Q=)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=
+OS:0%Q=)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=80%W=0%
+OS:S=A%A=O%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(
+OS:R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=
+OS:N%T=80%CD=Z)
+</pre></td></tr>
+</table></div>
+
+
+
+
+
+
+<br><a href="javascript:toggle('metrics_10.0.0.12');">
+    Misc Metrics <span class="noprint"><small> (click to expand)</small></span></a><div id="metrics_10.0.0.12" class="hidden"><table cellspacing="1">
+<tr class="head">
+<td>Metric</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>Ping Results</td>
+<td>arp-response</td>
+</tr>
+<tr>
+<td>Network Distance</td>
+<td>1 hops</td>
+</tr>
+<tr>
+<td>TCP Sequence Prediction</td>
+<td>Difficulty=260 (Good luck!)</td>
+</tr>
+<tr>
+<td>IP ID Sequence Generation</td>
+<td>Incremental</td>
+</tr>
+</table></div>
+</div>
+<hr class="print_only">
+<a name="host_10_0_0_23"></a><h2 class="up">10.0.0.23<span class="print_only">(online)</span>
+</h2>
+<div id="hostblock_10.0.0.23" class="unhidden">
+<h3>Address</h3>
+<ul>
+<li>10.0.0.23
+            (ipv4)
+          </li>
+<li>B8:27:EB:98:B9:C8 - Raspberry Pi Foundation 
+            (mac)
+          </li>
+</ul>
+
+
+
+<h3>Ports</h3>
+<p>The 996 ports scanned but not shown below are in state: <b>filtered</b></p>
+<ul><li><p>996 ports replied with: <b>no-responses</b></p></li></ul>
+<p>The 1 ports scanned but not shown below are in state: <b>closed</b></p>
+<ul><li><p>1 ports replied with: <b>reset</b></p></li></ul>
+<table id="porttable_10.0.0.23" cellspacing="1">
+<tr class="head">
+<td colspan="2">Port</td>
+<td>State 
+          <a href="javascript:togglePorts('porttable_10.0.0.23','closed');"><span class="noprint"><small> (toggle closed [0] </small></span></a><a href="javascript:togglePorts('porttable_10.0.0.23','filtered');"><span class="noprint"><small> | filtered [0])</small></span></a>
+</td>
+<td>Service</td>
+<td>Reason</td>
+<td>Product</td>
+<td>Version</td>
+<td>Extra info</td>
+</tr>
+
+
+
+
+
+<tr class="open">
+<td>22</td>
+<td>tcp</td>
+<td>open</td>
+<td>ssh </td>
+<td>syn-ack</td>
+<td>OpenSSH </td>
+<td>7.4p1 Raspbian 10+deb9u7 </td>
+<td>protocol 2.0 </td>
+</tr>
+<tr class="script">
+<td></td>
+<td>ssh-hostkey </td>
+<td colspan="6"><pre>
+  2048 a4:d3:42:54:f9:be:03:ed:92:c5:68:46:ea:25:72:37 (RSA)
+  256 1f:d0:68:f9:ee:dc:94:05:43:79:ee:f3:da:23:4e:2e (ECDSA)
+  256 c2:1a:e5:8e:94:de:67:ec:5f:9f:3f:6b:c0:b9:d5:90 (ED25519) </pre></td>
+</tr>
+<tr class="open">
+<td>53</td>
+<td>tcp</td>
+<td>open</td>
+<td>domain </td>
+<td>syn-ack</td>
+<td>ISC BIND </td>
+<td>9.10.3-P4 </td>
+<td>Raspbian Linux </td>
+</tr>
+<tr class="script">
+<td></td>
+<td>dns-nsid </td>
+<td colspan="6"><pre>
+  bind.version: 9.10.3-P4-Raspbian </pre></td>
+</tr>
+<tr class="open">
+<td>80</td>
+<td>tcp</td>
+<td>open</td>
+<td>http </td>
+<td>syn-ack</td>
+<td>lighttpd </td>
+<td>1.4.45 </td>
+<td> </td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-server-header </td>
+<td colspan="6"><pre>lighttpd/1.4.45 </pre></td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-title </td>
+<td colspan="6"><pre>Site doesn't have a title (text/html; charset=UTF-8). </pre></td>
+</tr>
+</table>
+<h3>Remote Operating System Detection</h3>
+<ul>
+<li>Used port: <b>22/tcp</b> (<b>open</b>)  </li>
+<li>Used port: <b>443/tcp</b> (<b>closed</b>)  </li>
+<li>OS match: <b>Linux 3.10 - 4.11</b> (<b>97%</b>)</li>
+<li>OS match: <b>Linux 3.2 - 4.9</b> (<b>96%</b>)</li>
+<li>OS match: <b>Linux 3.16 - 4.6</b> (<b>95%</b>)</li>
+<li>OS match: <b>Linux 2.6.32 - 3.13</b> (<b>95%</b>)</li>
+<li>OS match: <b>Linux 4.10</b> (<b>93%</b>)</li>
+<li>OS match: <b>Linux 2.6.22 - 2.6.36</b> (<b>93%</b>)</li>
+<li>OS match: <b>Linux 2.6.39</b> (<b>93%</b>)</li>
+<li>OS match: <b>Linux 3.10</b> (<b>93%</b>)</li>
+<li>OS match: <b>Linux 4.4</b> (<b>92%</b>)</li>
+<li>OS match: <b>Linux 2.6.32</b> (<b>92%</b>)</li>
+</ul>
+
+
+
+
+
+
+
+<br><a href="javascript:toggle('metrics_10.0.0.23');">
+    Misc Metrics <span class="noprint"><small> (click to expand)</small></span></a><div id="metrics_10.0.0.23" class="hidden"><table cellspacing="1">
+<tr class="head">
+<td>Metric</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>Ping Results</td>
+<td>arp-response</td>
+</tr>
+<tr>
+<td>System Uptime</td>
+<td>755361 seconds  (last reboot: Thu Feb 27 23:46:15 2020)
+        </td>
+</tr>
+<tr>
+<td>Network Distance</td>
+<td>1 hops</td>
+</tr>
+<tr>
+<td>TCP Sequence Prediction</td>
+<td>Difficulty=258 (Good luck!)</td>
+</tr>
+<tr>
+<td>IP ID Sequence Generation</td>
+<td>All zeros</td>
+</tr>
+</table></div>
+</div>
+<hr class="print_only">
+<a name="host_10_0_0_24"></a><h2 class="up">10.0.0.24<span class="print_only">(online)</span>
+</h2>
+<div id="hostblock_10.0.0.24" class="unhidden">
+<h3>Address</h3>
+<ul><li>10.0.0.24
+            (ipv4)
+          </li></ul>
+
+
+<h3>Ports</h3>
+<p>The 999 ports scanned but not shown below are in state: <b>closed</b></p>
+<ul><li><p>999 ports replied with: <b>resets</b></p></li></ul>
+<table id="porttable_10.0.0.24" cellspacing="1">
+<tr class="head">
+<td colspan="2">Port</td>
+<td>State 
+          <a href="javascript:togglePorts('porttable_10.0.0.24','closed');"><span class="noprint"><small> (toggle closed [0] </small></span></a><a href="javascript:togglePorts('porttable_10.0.0.24','filtered');"><span class="noprint"><small> | filtered [0])</small></span></a>
+</td>
+<td>Service</td>
+<td>Reason</td>
+<td>Product</td>
+<td>Version</td>
+<td>Extra info</td>
+</tr>
+
+
+<tr class="open">
+<td>22</td>
+<td>tcp</td>
+<td>open</td>
+<td>ssh </td>
+<td>syn-ack</td>
+<td>OpenSSH </td>
+<td>8.0p1 Ubuntu 6build1 </td>
+<td>Ubuntu Linux; protocol 2.0 </td>
+</tr>
+<tr class="script">
+<td></td>
+<td>ssh-hostkey </td>
+<td colspan="6"><pre>
+  3072 d5:75:5b:35:f4:d4:68:c1:81:b9:08:71:f3:0a:b5:92 (RSA)
+  256 a9:6d:12:5c:ce:c3:a0:7b:9e:52:bb:a1:af:bd:c4:85 (ECDSA)
+  256 dd:46:2a:e1:7a:a3:ce:0a:03:15:15:d9:d0:5d:cf:10 (ED25519) </pre></td>
+</tr>
+</table>
+<h3>Remote Operating System Detection</h3>
+<ul>
+<li>Used port: <b>22/tcp</b> (<b>open</b>)  </li>
+<li>Used port: <b>1/tcp</b> (<b>closed</b>)  </li>
+<li>Used port: <b>38931/udp</b> (<b>closed</b>)  </li>
+<li>OS match: <b>Linux 2.6.32</b> (<b>100%</b>)</li>
+</ul>
+
+
+
+
+
+
+<br><a href="javascript:toggle('metrics_10.0.0.24');">
+    Misc Metrics <span class="noprint"><small> (click to expand)</small></span></a><div id="metrics_10.0.0.24" class="hidden"><table cellspacing="1">
+<tr class="head">
+<td>Metric</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>Ping Results</td>
+<td>localhost-response</td>
+</tr>
+<tr>
+<td>System Uptime</td>
+<td>3439618 seconds  (last reboot: Mon Jan 27 22:08:39 2020)
+        </td>
+</tr>
+<tr>
+<td>Network Distance</td>
+<td>0 hops</td>
+</tr>
+<tr>
+<td>TCP Sequence Prediction</td>
+<td>Difficulty=256 (Good luck!)</td>
+</tr>
+<tr>
+<td>IP ID Sequence Generation</td>
+<td>All zeros</td>
+</tr>
+</table></div>
+</div>
+</div>
+<div id="menubox" class="noprint">
+<a href="#top"><small>Go to top</small></a><br><a href="javascript:toggleAll('closed');"><small>Toggle Closed Ports</small></a><br><a href="javascript:toggleAll('filtered');"><small>Toggle Filtered Ports</small></a>
+</div>
+</body>
+</html>

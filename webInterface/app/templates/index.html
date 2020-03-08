@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>{{ title }} - Test</title>
+</head>
+<body>
+<h1>Hello!</h1>
+
+<nav>
+    <ul>
+        <li><a href="{{url_for('static', filename='Scan_Output.html')}}"> View Results! :) </a></li>
+    </ul>
+</nav>
+
+<div>
+    <form>
+        TODO make button to run new scan
+    </form>
+</div>
+
+<p>
+    Scan results:
+
+    <code>
+    <pre>
+    {{scanresults}}
+    </pre>
+    </code>
+</p>
+
+</body>
+</html>
