@@ -42,9 +42,13 @@ It is designed with a focus on IoT Devices found in a "Smart Home" for home auto
 
 ## Contribution
 
-March 8
+Lines Committed the Project
 
-Lines Commited the Project
+simply clone the repo and run this script in the terminal
+
+    ./gitstats.sh
+
+March 8
 
 |Lines| User|
 |---|---|
