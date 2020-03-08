@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import webbrowser
 import requests
 
@@ -9,3 +10,4 @@ PublicIP = requests.get("http://ipecho.net/plain?").text
 
 
 webbrowser.open('https://shodan.io/search?query=' + PublicIP)
+

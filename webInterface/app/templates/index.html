@@ -6,27 +6,15 @@
             integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
             crossorigin="anonymous"></script>
 
-    <script type=text/javascript>
-        $(function() {
-          $('a#test').on('click', function() {
-            console.log('CLICC');
-            $.get('/background_process_test',
-                function(data) {
-              window.alert(data);
-            });
-            return false;
-          });
-        });
-
-
-    </script>
+    <script src="{{ url_for('static', filename='index_handlers.js') }}" type=text/javascript></script>
 </head>
 <body>
 <h1>Hello!</h1>
-
+Private IP: {{ hostname }}  Interface: {{ interface }}  Public IP {{ PublicIP }}
 <nav>
     <ul>
         <li><a href="{{url_for('static', filename='Scan_Output.html')}}"> View Results! :) </a></li>
+        <li><a id="shodanOpen" href="#"> Check Exposure </a></li>
     </ul>
 </nav>
 
@@ -39,7 +27,8 @@
     </form>
 
 </div>
-<div class="container">
+
+<!-- <div class="container">
     <p>
         Scan results:
 
@@ -50,5 +39,6 @@
         </code>
     </p>
 </div>
+-->
 </body>
 </html>
