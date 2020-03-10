@@ -1,3 +1,9 @@
 .idea/
 
+app/__init__.pyc
+app/__pycache__/
+app/routes.pyc
+
+Output/
+
 *.xml
