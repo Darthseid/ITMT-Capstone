@@ -10,6 +10,7 @@ pandas = "*"
 matplotlib = "*"
 flask = "*"
 requests ="*"
+functools = "*"
 
 [requires]
 python_version = "3"

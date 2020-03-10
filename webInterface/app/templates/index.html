@@ -10,7 +10,15 @@
 </head>
 <body>
 <h1>Hello!</h1>
-Private IP: {{ hostname }}  Interface: {{ interface }}  Public IP {{ PublicIP }}
+<div>
+    <ul>
+        <li>Interface:      {{ interface }} </li>
+        <li>Private IP:     {{ hostname }} </li>
+        <li> Gateway / Router IP :     {{ gateway }}</li>
+        <li> Public IP:     {{ getpublicip }}</li>
+
+    </ul>
+</div>
 <nav>
     <ul>
         <li><a href="{{url_for('static', filename='Scan_Output.html')}}"> View Results! :) </a></li>
