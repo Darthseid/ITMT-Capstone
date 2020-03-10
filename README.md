@@ -29,6 +29,22 @@ It is designed with a focus on IoT Devices found in a "Smart Home" for home auto
 * Printers
   * Identify Printers with port 9100 open and perform sample remote code execution
 
+
+
+---
+## Setup Guide
+
+  1. Clone the repo
+  2. Navigate to the repo
+  3. follow the README in webInterface/
+
+  **Alternatively**, you can clone the repo and run:
+  
+    cd  webInterface
+    ./setup.sh
+
+
+
 ----
 
 ## Team Members
