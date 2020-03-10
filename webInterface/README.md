@@ -6,7 +6,15 @@
     export FLASK_APP=webInterface.py
     flask run
 
-## Contribution
+
+### Automated setup
+Run the following in the current directory
+     ./setup.sh
+
+
+
+
+### Contribution
 
 (As of March 8)
 
