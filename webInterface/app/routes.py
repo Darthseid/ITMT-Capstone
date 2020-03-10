@@ -43,13 +43,22 @@ def index():
         print(os.path.abspath(SCAN_DATA_PATH))
         scanresults = None
 
-    return render_template('index.html', scanresults=scanresults, hostname=hostname(), interface=interface(),
+    return render_template('index.html',
+                           scanresults=scanresults,
+                           hostname=hostname(),
+                           interface=interface(),
+                           getpublicip=getpublicip(),
+                           gateway=gateway(),
                            Shodan='https://shodan.io/search?query=')
 
 
 def hostname():
-    return check_output(['hostname', '-I'])
+    return check_output(['hostname', '-I']).decode('UTF-8')
 
 
 def interface():
-    return check_output(['app/NetInfo.sh'])
+    return check_output(['app/NetInfo.sh']).decode('UTF-8')
+
+
+def gateway():
+    return check_output(['app/getGateway.sh']).decode('UTF-8')

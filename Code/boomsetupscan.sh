@@ -59,13 +59,13 @@ getInterface(){
 ScanMySubnet(){
     echo 
     echo "Scanning Subnet"
-    sudo nmap $mySubnet -sC -A --open -oX scannedlist.xml 
+    sudo nmap $mySubnet -sC -A --open -oX  Output/scannedlist.xml --webxml --priviledged
 }
 
 
 
 Output(){
-    CheckRoot
+    #CheckRoot
     getInterface  
     getIP
     getGateway

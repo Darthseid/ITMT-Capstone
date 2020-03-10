@@ -1,13 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 
-FirstTime(){
-echo "1. to Install"
-echo "2. to start Server"
+Output(){
+echo "1. to Install Requirements"
+echo "2. to start server"
 echo "3. to exit"
 local choice
 	read -n1 -p "> " choice
-	clear 
+	clear
   	case $choice in
   		1) Install_Config;;
   		2) Start_Config;;
@@ -16,25 +16,18 @@ local choice
 }
 
 Install_Config(){
-	sudo apt install python3.7 npm -y
-	python3.7 -m pip install -U pip
-	python3.7 -m pip install -U pipenv
+	sudo apt install python3 npm -y
+	pip3 install pipenv requests
 	pipenv install
+  Start_Config
 }
 
 Start_Config(){
-	pipenv shell
-	export FLASK_APP=webInterface.py
-	flask run
+  export FLASK_APP=webInterface.py
+  pipenv shell flask run
+
 }
 
-Output()
-{
-FirstTime
-}
 
-while true
-do
- Output
-done
-exit 0
+
+Output
