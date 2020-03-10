@@ -1,16 +1,16 @@
-import json
+import json #This is the second converter used. After the temporary blank file is written, this one converts it into SQL.
 
-TABLE_NAME = "tab"
+TABLE_NAME = "tab" 
 
 sqlstatement = ''
-with open ('data.json','r') as f:
+with open ('JSON_Output.json','r') as f:
     jsondata = json.loads(f.read())
 
 for json in jsondata:
     keylist = "("
     valuelist = "("
     firstPair = True
-    for key, value in json.items():
+    for key, value in json.items(): #This line is causing errors for some reason.
         if not firstPair:
             keylist += ", "
             valuelist += ", "
@@ -24,5 +24,6 @@ for json in jsondata:
     valuelist += ")"
 
     sqlstatement += "INSERT INTO " + TABLE_NAME + " " + keylist + " VALUES " + valuelist + "\n"
-
-print(sqlstatement)
+file = open('SQL_Output.sql','w+')
+file.write(sqlstatement)
+file.close()
