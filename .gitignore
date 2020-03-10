@@ -1,8 +1,8 @@
 .idea/
 
-app/__init__.pyc
-app/__pycache__/
-app/routes.pyc
+webInterface/app/__init__.pyc
+webInterface/app/__pycache__/
+webInterface/app/routes.pyc
 
 Output/
 
