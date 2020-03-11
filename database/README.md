@@ -83,6 +83,12 @@
       >>> u = User(username='Jorell', email='test@gmail.com')
       >>> db.session.add(u)
       >>> db.session.commit()
+      
+   ### Deleting users from query
+      >>>users = User.query.all()
+      for u in users:
+            db.session.delete(u)
+      >>> db.session.commit
 
    ### Return all users
       >>> users = Users.query.all()
@@ -91,3 +97,8 @@
       >>> for u in users:
             print(u.id, u.username)
       output
+
+   ### Returning the query with ID
+      >>> u = User.query.get(#)
+      >>> u
+      <output>
