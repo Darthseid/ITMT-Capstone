@@ -59,8 +59,8 @@ getInterface(){
 ScanMySubnet(){
     echo 
     echo "Scanning Subnet"
-    sudo nmap $mySubnet -sC -A --open -oX  Output/scannedlist.xml --webxml --priviledged
-}
+    sudo nmap $mySubnet -sC -A --open -oX  Output/scannedlist.xml --webxml
+ }
 
 
 
