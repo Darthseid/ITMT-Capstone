@@ -17,7 +17,7 @@ local choice
 
 Install_Config(){
 	sudo apt install python3 npm -y
-	pip3 install pipenv requests
+	python3 -m  pip install -U pipenv requests
 	pipenv install
   Start_Config
 }
