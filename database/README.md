@@ -33,6 +33,7 @@
          from app import routes, models
 
 # User database model
+- You can add x amounts of tables ex. Devices, and users
 - Create a new file called: touch /app/models.py and code
       
       class User(db.Model):
@@ -43,9 +44,16 @@
 
       def __repr__(self):
          return '<User {}>'.format(self.username)   
-# Python command to create models into User
+# Python command to test models into User
       >>> from app.models import User
       >>> u = User(username='Jorell' email='abcd@gmail.com)
       call u
       >>> u
       output:<User Jorell>
+
+# Any changes in "models.py"
+   - for example: adding a new table for "devices"
+
+         flask db migrate -m "message here"
+### "flask db migrate" means to commits the changes
+
