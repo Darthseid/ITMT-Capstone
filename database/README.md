@@ -45,7 +45,7 @@
          email = db.Column(db.String(120), index=True, unique=True)
          password_hash = db.Column(db.String(128))
          posts = db.relationship('Post', backref='author', lazy='dynamic')
-         //note here db.relationship, there is a relationshop to user
+         //note here db.relationship, there is a relationship to user
          def __repr__(self):
             return '<User {}>'.format(self.username)
 
