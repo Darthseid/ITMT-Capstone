@@ -85,7 +85,7 @@
       >>> db.session.commit()
       
    ### Deleting users from query
-      >>>users = User.query.all()
+      >>> users = User.query.all()
       for u in users:
             db.session.delete(u)
       >>> db.session.commit
