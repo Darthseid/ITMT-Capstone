@@ -29,7 +29,7 @@ def background_process_test():
 
 
 @app.route('/')
-@app.route('/index')
+@app.route('../../ui-ux/vcheck.html')
 def index():
     scanresults = None
 
@@ -43,7 +43,7 @@ def index():
         print(os.path.abspath(SCAN_DATA_PATH))
         scanresults = None
 
-    return render_template('index.html',
+    return render_template('vcheck.html',
                            scanresults=scanresults,
                            hostname=hostname(),
                            interface=interface(),
