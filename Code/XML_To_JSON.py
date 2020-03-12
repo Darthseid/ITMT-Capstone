@@ -1,4 +1,4 @@
-import xmltodict
+import xmltodict #Note, this program does not work if "pip install xmltodict" isn't used first.
 import json #This is the first file used. You turn XML to JSON and then JSON into SQL.
      
 with open('Filter_Output.xml') as in_file:
