@@ -1,4 +1,4 @@
-import regex
+import regex #Note, this program does not work if "pip install regex" wasn't executed first.
 import re
 output = ""
 with open('class-scan.xml', 'r') as myfile: #This turns the entire contents of the file into a string.
