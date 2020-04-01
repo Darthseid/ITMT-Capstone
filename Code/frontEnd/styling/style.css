@@ -5,6 +5,91 @@ body {
 	background-color: white;
 }
 
+/*blogList*/
+
+#blogList{
+	background-color: white;
+	margin-left: 30%;
+	margin-right: 30%;
+	margin-top:4%;
+	height: 100%;
+}
+#blogTitle{
+	color:grey;
+	font-weight: bolder;
+	padding-top: 5%;
+}
+#items{
+	background-color: lightgrey;
+}
+
+#test{
+	color: black;
+	padding-bottom: 1%;
+	/*background-color: blue;*/
+}
+
+#postDes {
+	color:black;
+	/*background-color: red;*/
+	font-size: 15px;
+}
+
+#date {
+	padding-top: 2%;
+	padding-bottom: 0%;
+	/*background-color: purple;*/
+	color: black;
+	font-size: small;
+	font-weight: bold;
+}
+
+#images {
+	height: 10%;
+	width: 90%;
+	margin-left: 5%;
+}
+
+a:link {
+	text-decoration: none;
+	color: black;
+}
+
+a:visited{
+	color: black;
+}
+
+/*signup*/
+#login{
+
+}
+
+#user{
+
+}
+
+#pass{
+
+}
+
+#button{
+
+}
+
+form{
+	margin-left: 30%;
+	margin-right: 30%;
+	margin-top: 10%;
+	margin-bottom: 5%;
+}
+
+fieldset{
+	display: block;
+	margin-left:33%;
+	margin-right: 33%;
+	margin-top:5%;
+}
+
 /*Home Page Styling*/
 #homepage {
   background-size: 1800px 900px;
@@ -22,6 +107,8 @@ body {
   text-decoration: none;
   font-size: 15px;
   margin-right: 3%;
+	padding: 2%;
+	padding-bottom: 2%;
 }
 
 #navigation a:hover {
@@ -161,7 +248,7 @@ body {
 			padding-left: 5%;
 			padding-right: 5%;
 		}
-		
+
 		.text-block4 p{
 			font-size: 25px;
 			padding-top: 65px;
@@ -169,7 +256,7 @@ body {
 			width: 50%;
 			margin-left: 80px;
 		}
-		
+
 		/* Grid for images*/
 		.grid-container {
 			display: grid;
@@ -541,9 +628,9 @@ figcaption{
 	height: 100px;
 	padding-bottom: 50px;
 	box-sizing: border-box;
-	// border: 2px solid #ccc; 
-	// border-radius: 4px; 
-	// background-color: #f8f8f8; 
+	// border: 2px solid #ccc;
+	// border-radius: 4px;
+	// background-color: #f8f8f8;
 	font-size: 16px;
 	resize: none; }
 */
@@ -695,6 +782,5 @@ footer {
 .field li {
   width: 99%;
   margin-bottom: 5%;
-  text-align: right;	
+  text-align: right;
 }
-
