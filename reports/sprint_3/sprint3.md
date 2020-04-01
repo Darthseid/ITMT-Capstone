@@ -1,8 +1,12 @@
 # Sprint-03 Written Report
 
-## Team Number XX
+## Team Number 13
+- UI/UX Artifacts: Jorell Socorro & Amairani López
+- Infrastructure: Jared Mcvey
+- Developer: Jorell Socorro
+- Junior Developer: Jared Mcvey & Jorell Socorro
+- Project Manager: Amairani López
 
-List team members and roles here
 
 ### UI/UX Artifacts
 
