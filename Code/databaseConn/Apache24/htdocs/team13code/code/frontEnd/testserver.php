@@ -23,6 +23,8 @@
             }
             $dbconn->close();
         }
+        
+    header('Location: blogList.html');
     }
     
     
