@@ -76,6 +76,19 @@ a:visited{
 
 }
 
+form{
+	margin-left: 30%;
+	margin-right: 30%;
+	margin-top: 10%;
+	margin-bottom: 5%;
+}
+
+fieldset{
+	display: block;
+	margin-left:33%;
+	margin-right: 33%;
+	margin-top:5%;
+}
 
 
 /*Home Page Styling*/

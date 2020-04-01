@@ -1,0 +1,12 @@
+For Installation:
+https://www.youtube.com/watch?v=R6typ9ozMOo&list=LLfw58b-CvLDg0hivi8RPDoQ&index=3&t=1136s
+Apache
+PHP
+- C:\php rename the "php.ini-development" to "php.ini"
+   open then find "Extention-dir"
+   remove the ";"
+   find "-php_mysql.dll"
+   remove the ";"
+   go to C:\php nad type php -n
+MySQL
+phpMyAdmin
