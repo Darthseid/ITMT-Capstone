@@ -1,4 +1,5 @@
 <?php
+    $email = $_POST[email];
     $username = $_POST[username];
     $password = $_POST[password];
 
@@ -9,34 +10,20 @@
         $dbname = "logintest";
 
         $dbconn = new mysqli($host, $dbUser, $dbpass, $dbname);
-
-        if (maysqli_connect_error()) {
+        if (mysqli_connect_error()) {
             die('Connect Error');
         }  
          else {
-            $SELECT = "SELECT username From register Where username = ? Limit 1";
-            $INSERT = "INSERT Into register (username, password) values(?, ?)";
-
-            //prepare statement
-            $stmt = $dbconn->prepare($SELECT);
-            $stmt->bind_param("s", $username);
-            $stmt->execute();
-            $stmt->bind_result($username);
-            $stmt->store_result();
-            $rnum = $stmt->num_rows;
-
-            if ($rnum==0) {
-                $stmt->close();
-
-                $stmt = $dbconn->prepare($INSERT);
-                $stmt->bind_param("ss", $username, $password);
-                $stmt->execute();
-                echo "Recorded success";
-            } else {
-                echo "Username already exist";
+            $sql = "INSERT Into testing (email, username, password) values ('$email','$username','$password')";
+            if($dbconn->query($sql)) {
+                echo "record added";
             }
-            $stmt->close();
+            else {
+                echo "Error: ". $sql ."<br>". $dbconn->error;
+            }
+            $dbconn->close();
         }
     }
+    
     
 ?>

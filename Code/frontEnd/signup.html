@@ -29,15 +29,21 @@
 
     <h1> Sign In </h1>
     <fieldset>
-    <form>
+    <form action="testserver.php" method="POST">
+      <!-- display validation errors-->
       <div id = "login">
+        <label id="email" for="email"><b>Email</b></label>
+        <input type="text" placeholder="Email" id="email" name="email" required>
+
         <label id="user" for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Username" name="uname" required>
+        <input type="text" placeholder="Username" id="username" name="username" required>
 
         <label id="pass" for="password"><b>Password</b></label>
-        <input type="text" placeholder="Password" name="uname" required>
+        <input type="text" placeholder="Password" id="password" name="password" required>
 
-        <button id="button"> <a href="./blogList.html">Login</a></button>
+        <button type="submit" name="login" class="btn">Register</button>
+
+        <!--<button id="button"> <a href="./blogList.html">Login</a></button>-->
 
         <div class="loginContainer">
           <span class="fgtpass"> Forgot <a href="#">password?</a></span>
