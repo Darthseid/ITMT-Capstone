@@ -12,7 +12,7 @@
 
 
 ## Infrastructure
-
+![infra](media/infractImg.PNG)
 
 ## Developer
 ![dev](media/developerImg1.PNG)
