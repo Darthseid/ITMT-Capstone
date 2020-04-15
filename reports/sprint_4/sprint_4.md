@@ -9,7 +9,7 @@
 
 
 ## UI/UX Artifacts
-
+![Navigate](media/website_sample.mp4 "Navigating Through Site")
 
 ## Infrastructure
 
