@@ -18,8 +18,11 @@
 
 
 ## Junior Developer
-
-
+![Front-end](media/Artifact_1.PNG "First")
+![Front_End](media/Artifact_2.PNG "Second")
+![Database](media/Artifact_3.PNG "Third")
+![Connect](media/Artifact_4.PNG "Fourth")
+![Finalize](media/Artifact_5.PNG "Fifth")
 ## Project Manager
 
 ### Boom Saver Goal: 
