@@ -39,7 +39,7 @@
         <input type="text" placeholder="Username" id="username" name="username" required>
 
         <label id="pass" for="password"><b>Password</b></label>
-        <input type="text" placeholder="Password" id="password" name="password" required>
+        <input type="password" placeholder="Password" id="password" name="password" required>
 
         <button type="submit" name="submit" class="btn">Register</button>
 

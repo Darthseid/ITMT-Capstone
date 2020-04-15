@@ -27,12 +27,19 @@
                     echo "wrong";    
                 }
                 //everything is correct
-                else if ($password== $row['pwdUsers']) {
+                else if ($password == $row['pwdUsers'] && ($password != "root")) {
                     session_start();
                     //$_SESSION['username'] = $row['idUsers'];
                     $_SESSION['username'] = $row['uidUsers'];
 
                     header("Location: ../../index.php?success");
+                    exit();
+                }
+                else if ($username == "admin" && $password == "root") {
+                    session_start();
+                    //$_SESSION['username'] = $row['idUsers'];
+                    $_SESSION['username'] = $row['uidUsers'];
+                    header("Location: ../admin.php?=adminLogin");
                     exit();
                 }
                 else {
