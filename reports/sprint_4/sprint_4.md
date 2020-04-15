@@ -15,7 +15,7 @@
 
 
 ## Developer
-
+media/developerImg1.PNG
 
 ## Junior Developer
 ![Front-end](media/Artifact_1.PNG "First")
