@@ -16,6 +16,12 @@
 ![infra](media/infractImg.PNG)
 ### Database Structure
 ![infra](media/infractImg2.PNG)
+### Script Database Connect
+![infra](media/infractImg3.PNG)
+### Script Logging out
+![infra](media/infractImg4.PNG)
+### Script Insert to Database
+![infra](media/infractImg5.PNG)
 
 ## Developer
 ### Proof of developement
@@ -24,6 +30,10 @@
 ![dev](media/developerImg2.PNG)
 ### php scripts to react to database
 ![dev](media/developerImg3.PNG)
+### Header Nav html php
+![dev](media/developerImg4.PNG)
+### Index.php main page
+![dev](media/developerImg5.PNG)
 
 
 ## Junior Developer
