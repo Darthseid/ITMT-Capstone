@@ -15,8 +15,12 @@
 ![infra](media/infractImg.PNG)
 
 ## Developer
-
+### Proof of developement
 ![dev](media/developerImg1.PNG)
+### Restart of html to php
+![dev](media/developerImg2.PNG)
+### php scripts to react to database
+![dev](media/developerImg3.PNG)
 
 
 ## Junior Developer
@@ -29,6 +33,7 @@
 
 ### Boom Saver Goal:
 - Give users that are tech illiterate awareness on the technology vulnerabilities around them and motivate them to stay informed through a point and blog system.
+
 ### Sprint 4 Goals:
 - Home Page is hard coded with current news articles.
 - FAQ / Contact Us page is integrated.
@@ -36,9 +41,8 @@
 - Blog System Hard Coded.
 
 ### Sprint 4 Goals:
-- Blog system integrated on website.
-- Database with Sign Up/Log In/ Sign Out and Blog is connected and working with the site
+- Blog system integrated on website and must have users to add blogs and comments
 - Embed point system for users
 
 1. Place images of the full User & Admin and/or anonymous story here with annotations of the functioning and the non-functioning portions as necessary (can reuse the artifact created by UI/UX)
-1. List any detailed assumptions your team made explaining deliverable context as needed
+2. List any detailed assumptions your team made explaining deliverable context as needed
