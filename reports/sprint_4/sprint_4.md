@@ -12,7 +12,10 @@
 ![Navigate](media/website_sample.mp4 "Navigating Through Site")
 
 ## Infrastructure
+### Database of Users
 ![infra](media/infractImg.PNG)
+### Database Structure
+![infra](media/infractImg2.PNG)
 
 ## Developer
 ### Proof of developement
