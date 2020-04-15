@@ -4,7 +4,7 @@
 - UI/UX Artifacts: Amairani López
 - Infrastructure: Jorell Soccoro
 - Developer: Jorell Socorro
-- Junior Developer: Jared Mcvey 
+- Junior Developer: Jared Mcvey
 - Project Manager: Jared McVey
 
 
@@ -15,7 +15,7 @@
 
 
 ## Developer
-
+![dev](media/developerImg1.PNG)
 
 ## Junior Developer
 ![Front-end](media/Artifact_1.PNG "First")
@@ -25,15 +25,15 @@
 ![Finalize](media/Artifact_5.PNG "Fifth")
 ## Project Manager
 
-### Boom Saver Goal: 
+### Boom Saver Goal:
 - Give users that are tech illiterate awareness on the technology vulnerabilities around them and motivate them to stay informed through a point and blog system.
-### Sprint 4 Goals: 
+### Sprint 4 Goals:
 - Home Page is hard coded with current news articles.
-- FAQ / Contact Us page is integrated. 
-- Sign Up process is available. 
-- Blog System Hard Coded. 
+- FAQ / Contact Us page is integrated.
+- Sign Up process is available.
+- Blog System Hard Coded.
 
-### Sprint 4 Goals: 
+### Sprint 4 Goals:
 - Blog system integrated on website.
 - Database with Sign Up/Log In/ Sign Out and Blog is connected and working with the site
 - Embed point system for users
