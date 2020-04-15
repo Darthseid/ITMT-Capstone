@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en" id="contact">
   <head>
@@ -5,8 +8,8 @@
       <meta charset="utf-8">
       <meta name="viewport"
           content="width=device-width,initial-scale=1.0,shrink-to-fit=no" /> 
-      <link rel="stylesheet" type="text/css" href="styling/normalize.css">			
-      <link rel="stylesheet" type="text/css" href="styling/style.css" /> 
+      <link rel="stylesheet" type="text/css" href="../styling/normalize.css">			
+      <link rel="stylesheet" type="text/css" href="../styling/style.css" /> 
   </head>
   <body class="contactpg">
     <header id="header" class="homehead">
@@ -14,12 +17,19 @@
 	 <nav id="navigation">	
 	 <!-- This is the top navigation bar showing the 4 main pages -->
        <ul id= "topbar">
-	     <img class="titlemain" src="media/boomLogo.png" alt = "Boom Saver Logo" />
-       <a href="signup.html"> Sign In </a>
-       <a href="history.html"> My History </a>
-       <a href="blogList.html"> Blogs</a>
-       <a href="contact.html"> Contact Us</a>
-       <a href="index.html"> Tech News </a>
+	     <img class="titlemain" src="../media/boomLogo.png" alt = "Boom Saver Logo" />
+       <?php
+            if (isset($_SESSION['username'])) {
+                echo '<a href="includes/logout.inc.php"> Log Out </a>';
+            }
+            else {
+                echo '<a href="login.php"> Sign In </a>';
+            }
+         ?>
+       <a href="history.php"> My History </a>
+       <a href="blogList.php"> Blogs</a>
+       <a href="contact.php"> Contact Us</a>
+       <a href="../index.php"> Tech News </a>
         </ul>
      </nav>
     </header>

@@ -1,7 +1,7 @@
 <?php
-    $email = $_POST[email];
-    $username = $_POST[username];
-    $password = $_POST[password];
+    $email = $_POST['email'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
     if(!empty($username) || !empty($password)) {
         $host = "localhost";
@@ -23,9 +23,8 @@
             }
             $dbconn->close();
         }
-        
-    header('Location: blogList.html');
     }
-    
+
+    header('Location: ../blogList.php');
     
 ?>

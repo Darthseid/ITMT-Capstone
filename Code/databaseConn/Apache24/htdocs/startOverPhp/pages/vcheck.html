@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" id="index">
+  <head>
+    <title> Boom Saver </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+    <link rel="stylesheet" type="text/css" href="styling/normalize.css">
+    <link rel="stylesheet" type="text/css" href="styling/style.css" />
+	<script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous">
+	</script>
+    <script src="{{ url_for('static', filename='index_handlers.js') }}" type=text/javascript></script>
+  </head>
+
+  
+  <body class="bkpg1">
+    <header id="header" class="homehead">
+     <h1>Network Scanner</h1>
+	 <nav id="navigation">
+	 <!-- This is the top navigation bar showing the 4 main pages -->
+       <ul id= "topbar">
+	     <img class="titlemain" src="media/boomLogo.png" alt = "Boom Saver Logo" />
+         <a href="signup.html"> Sign In </a>
+          <a href="history.html"> My History </a>
+          <a href="blogList.html"> Blogs</a>
+          <a href="contact.html"> Contact Us</a>
+          <a href="index.html"> Tech News </a>
+        </ul>
+     </nav>
+    </header>
+
+	 <!-- Split Screen into 2-->
+	<div id='container5'>
+	  <div class='item'>
+		<div class="centered">
+		  <div>
+			 <form>
+			   <a href=# id="test">
+			     <button class='scan-but'>
+				  <img src="media/scanN.png" />
+				 </button>
+		       </a>
+			 </form>
+			<p>Press the "Scan Network" button above to be more aware of your media surroundings. Discover what vulnerabilities you might have connected to your network. Very safe process catered to you. </p>
+		  </div>
+		</div>
+	  </div>
+	  <div class='item2'>
+		<div class="centered">
+		  <div class='item3'></div>
+		  <h4>or</h4>
+		  <div class='item3'></div>
+		</div>
+	  </div>
+  	  <div class='item'>
+		<div class="centered">
+		  <div class='find-label'>
+		    <img src="media/find-label.png" />
+		  </div>
+		   <form class='formfield'>
+			 <fieldset class='field'>
+				<ol>
+				  <li id="product">
+					<label for="inpProduct">Product Type: </label>
+					<input id="inpProduct" type="text" name="inpProduct" placeholder="Webcam"/>
+				  </li>
+				  <li id="modelNumber">
+					<label for="modelNum"> Model Number:  </label>
+					<input id="modelNum" type="text" name="modelNum" placeholder="X1234" />
+				  </li>
+				  <li id="modelYear">
+					<label for="modelYear"> Model Year: </label>
+					<input id="modelYear" type="number" name="modelYear" placeholder="1980" value="1980"  />
+				  </li>
+				  <li id="manufacturer">
+					<label for="manuf"> Manufacturer: </label>
+					<input id="manuf" type="text" name="manuf" placeholder="Logitech" />
+				  </li>
+
+				</ol>
+			 </fieldset>
+		   </form>
+		  <button class='find-but'>
+		    <img src="media/find-but.png" />
+	      </button>
+		</div>
+	  </div>
+    </div>
+	 <footer id="footer">
+	   <ul>
+	 	  <h4>Boom Saver<em> 2020 </em> <strong>&copy;</strong></h4>
+ 	   </ul>
+	 </footer>
+  </body>
+</html>

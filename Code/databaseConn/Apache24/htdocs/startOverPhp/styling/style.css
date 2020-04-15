@@ -59,21 +59,32 @@ a:visited{
 	color: black;
 }
 
+/*login.html*/
+.test {
+	margin-left: 9%;
+	padding-left:3%;
+	padding-right: 3%;
+	border: 1px solid grey;
+
+}
+.newUserContainer {
+	margin-top: 10%;
+	color: grey;
+}
+.loginContainer{
+	margin-top: 10%;
+}
+.btn {
+	margin-top: 10%;
+    margin-left: 24%;
+    height: 35px;
+    width: 106px;
+}
+
 /*signup*/
-#login{
 
-}
-
-#user{
-
-}
-
-#pass{
-
-}
-
-#button{
-
+#emailText{
+	padding-right:10%;
 }
 
 form{
