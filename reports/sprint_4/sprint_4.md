@@ -22,6 +22,8 @@
 ![infra](media/infractImg4.PNG)
 ### Script Insert to Database
 ![infra](media/infractImg5.PNG)
+### ADMIN PAGE AFTER LOGGED IN
+![infra](media/infractImg6.PNG)
 
 ## Developer
 ### Proof of developement
