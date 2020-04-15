@@ -49,3 +49,4 @@
 
 1. Place images of the full User & Admin and/or anonymous story here with annotations of the functioning and the non-functioning portions as necessary (can reuse the artifact created by UI/UX)
 2. List any detailed assumptions your team made explaining deliverable context as needed
+~~ Issues with the database with other team members is the biggest challenge that I am trying to solve. Worked on the problem for about 3-8 hours with the guidance but had no progress to the point where another plan to share database information for the product is needed. Overall two tasks are left which are to post blogs and add comments to the blog~~
