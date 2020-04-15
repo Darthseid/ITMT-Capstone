@@ -15,11 +15,9 @@
 ![infra](media/infractImg.PNG)
 
 ## Developer
-<<<<<<< HEAD
+
 ![dev](media/developerImg1.PNG)
-=======
-media/developerImg1.PNG
->>>>>>> 7dfae50a9bad0d58aa2c1f7bb19de89883169c3e
+
 
 ## Junior Developer
 ![Front-end](media/Artifact_1.PNG "First")
