@@ -17,7 +17,7 @@
 
 	<h2 id= "meeting">Find out what is going on around you Tech Wise!</h2>
  	<div id="social">
-      <a href="vcheck.html"><img id="social" src="media/scan1.png" alt = "Nimby Cloud Logo"/></a>
+      <a href="pages/blogList.php"><img id="social" src="media/scan1.png" alt = "Nimby Cloud Logo"/></a>
 	</div>
 	
   <div class="grid-container">
