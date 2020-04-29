@@ -6,7 +6,7 @@
         $password = $_POST['password'];
 
 
-        $sql = "SELECT * FROM users WHERE uidUsers=?";
+        $sql = "SELECT * FROM usercom WHERE uidUsers=?";
         $stmt = mysqli_stmt_init($conn);
 
         if (!mysqli_stmt_prepare($stmt, $sql)) {
