@@ -75,7 +75,7 @@
                         if ($result->num_rows > 0) {
                             // output data of user and comment
                             while($row = $result->fetch_assoc()) {
-                                echo "<br> users: ". $row["uidUsers"]. " - comment: ". $row["comments"].  "<br>";
+                                echo "<br>".$row["uidUsers"]. "<br>". $row["comments"].  "<br>";
                             }
                         } 
                         //it is empty
