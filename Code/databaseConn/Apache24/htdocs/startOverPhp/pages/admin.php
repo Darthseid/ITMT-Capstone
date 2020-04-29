@@ -41,7 +41,7 @@
         <?php
             require 'includes/dbh.inc.php';
             
-            $sql = "SELECT uidUsers, emailUsers FROM users";
+            $sql = "SELECT uidUsers, emailUsers FROM usercom";
             $result = $conn->query($sql);
             
             if ($result->num_rows > 0) {
