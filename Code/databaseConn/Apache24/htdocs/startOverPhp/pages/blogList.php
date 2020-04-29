@@ -53,11 +53,11 @@
                     as network connectivity is added to products that were not previously intended to have this functionality....</a> 
                     </p>
                 <input id="inpComment" type="text" name="inpProduct" placeholder="Comment on the article"/>
-                <input type="submit" value="Submit">
+                <button type="submit" name="comment" class="btn">Comment</button>
             </div><br>
         </form>
 
-        
+
         <div id="items">
             <h2 id="test"> How Attackers Could Hijack Your Android Camera to Spy on You</h2>
             <img src="../media/Post2.PNG" id="images">
