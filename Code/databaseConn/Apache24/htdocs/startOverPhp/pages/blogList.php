@@ -64,24 +64,25 @@
                         }
                         //guests cannot comment
                         else {
-                            echo '<p> show comments but guests cannot comment </p>';
+                            
                         }
 
                         //sql statments
                         $sql = "SELECT uidUsers, comments FROM usercom";
                         $result = $conn->query($sql);
-                        
+
                         //to check if database is not empty
-                        if ($result->num_rows > 0) {
-                            // output data of user and comment
-                            while($row = $result->fetch_assoc()) {
-                                echo "<br>".$row["uidUsers"]. "<br>". $row["comments"].  "<br>";
+                            if ($result->num_rows > 0) {
+                                // output data of user and comment
+                                while($row = $result->fetch_assoc()) {
+                                    echo "<br>".$row["uidUsers"]. "<br>". $row["comments"].  "<br>";
+                                }
+                            } 
+                            //it is empty
+                            else {
+                                echo "0 results";
                             }
-                        } 
-                        //it is empty
-                        else {
-                            echo "0 results";
-                        }
+
                         
                         $conn->close();
                     ?>
