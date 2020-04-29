@@ -2,8 +2,8 @@
 
 $servername = "localhost";
 $dBUsername = "root";
-$dBPassword = "Clarinet51423!";
-$dBName = "logintest";
+$dBPassword = "Clarinet51423!";//change this to your database info
+$dBName = "logintest";//change this to your database info
 $user = "admin";
 $pass = "root";
 
@@ -38,7 +38,7 @@ $stmt1->store_result();
 
 //checks if admin was already created
 if ($stmt1->num_rows) {
-    echo "ezists";
+   
 }
 //automatically creates an admin account
 else {
