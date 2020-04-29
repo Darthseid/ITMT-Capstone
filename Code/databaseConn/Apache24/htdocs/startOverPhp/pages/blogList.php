@@ -52,8 +52,21 @@
                     The trend represents a huge shift in how products are made and used,
                     as network connectivity is added to products that were not previously intended to have this functionality....</a> 
                     </p>
-                <input id="inpComment" type="text" name="inpProduct" placeholder="Comment on the article"/>
-                <button type="submit" name="comment" class="btn">Comment</button>
+                    
+                   
+                    <?php
+                        if (isset($_SESSION['username'])) {
+                            echo '<p> you are logged in ' . $_SESSION['username'] . '.</p>';
+                            echo '<input id="inpComment" type="text" name="inpComment" placeholder="Comment on the article"/>';
+                            echo '<button type="submit" name="comment" class="btn">Comment</button>';
+                        }
+                        else {
+                            echo '<p> show comments but guests cannot comment </p>';
+                        }
+                    ?>
+                
+
+
             </div><br>
         </form>
 
