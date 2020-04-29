@@ -10,7 +10,7 @@
 
         //variables for database
         $sql = "UPDATE usercom SET comments = '$comment' WHERE uidUsers = '$user'" ;
-        //$stmt = mysqli_stmt_init($conn);    
+        ///$stmt = mysqli_stmt_init($conn);    
 
         if (mysqli_query($conn,$sql)) {
             header("Location: ../blogList.php?commentsuccess");
