@@ -43,17 +43,21 @@
 
     <div id="blogList">
         <h1 id="blogTitle">Blog Posts</h1>
-        <div id="items">
-            <h2 id="test"> Why IoT vulnerabilities leave devices open to attack</h2>
-            <img src="../media/Post1.PNG" id="images">
-            <p id="date">January 16, 2020 author: Elly Yates-Roberts</p>
-            <p id="postDes"> <a href="https://www.technologyrecord.com/Article/why-iot-vulnerabilities-leave-devices-open-to-attack-76774">Devices were popular gifts again this holiday season. An acronym for internet of things, IoT is more than a buzzword. 
-                The trend represents a huge shift in how products are made and used,
-                 as network connectivity is added to products that were not previously intended to have this functionality....</a> 
-                </p>
-            <input id="inpComment" type="text" name="inpProduct" placeholder="Comment on the article"/>
-			<input type="submit" value="Submit">
-        </div><br>
+        <form action="includes/comment.inc.php" method="POST">
+            <div id="items">
+                <h2 id="test"> Why IoT vulnerabilities leave devices open to attack</h2>
+                <img src="../media/Post1.PNG" id="images">
+                <p id="date">January 16, 2020 author: Elly Yates-Roberts</p>
+                <p id="postDes"> <a href="https://www.technologyrecord.com/Article/why-iot-vulnerabilities-leave-devices-open-to-attack-76774">Devices were popular gifts again this holiday season. An acronym for internet of things, IoT is more than a buzzword. 
+                    The trend represents a huge shift in how products are made and used,
+                    as network connectivity is added to products that were not previously intended to have this functionality....</a> 
+                    </p>
+                <input id="inpComment" type="text" name="inpProduct" placeholder="Comment on the article"/>
+                <input type="submit" value="Submit">
+            </div><br>
+        </form>
+
+        
         <div id="items">
             <h2 id="test"> How Attackers Could Hijack Your Android Camera to Spy on You</h2>
             <img src="../media/Post2.PNG" id="images">
@@ -64,6 +68,7 @@
             <input id="inpComment" type="text" name="inpProduct" placeholder="Comment on the article"/>
 			<input type="submit" value="Submit">
         </div><br>
+
         <div id="items">
             <h2 id="test"> Protect Your Computer From Viruses, Hackers, and Spies</h2>
             <img src="../media/Post3.PNG" id="images">
