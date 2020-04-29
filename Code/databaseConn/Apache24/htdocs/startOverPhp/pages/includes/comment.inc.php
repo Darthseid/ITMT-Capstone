@@ -13,11 +13,14 @@
         //$stmt = mysqli_stmt_init($conn);    
 
         if (mysqli_query($conn,$sql)) {
-            echo "Record updated successfully";
+            header("Location: ../blogList.php?commentsuccess");
+            exit();
         }
         else {
             echo "failed";
         }
+        mysqli_stmt_close($stmt);
+        mysqli_close($conn);
 
     }
     else {
