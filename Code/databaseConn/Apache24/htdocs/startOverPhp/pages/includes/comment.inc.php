@@ -1,2 +1,9 @@
 <?php
-    echo "comment page";
+    if(isset($_POST['comment'])) {
+        echo "comment page";
+    }
+    else {
+        //error occurs
+        echo "error";
+    }
+    
