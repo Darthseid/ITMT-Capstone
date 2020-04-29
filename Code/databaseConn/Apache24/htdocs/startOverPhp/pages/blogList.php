@@ -1,4 +1,5 @@
 <?php
+    require 'includes/dbh.inc.php';
     session_start();
 ?>
 
@@ -55,14 +56,34 @@
                     
                    
                     <?php
+                        //makes sure account users can comment
                         if (isset($_SESSION['username'])) {
                             echo '<p> you are logged in ' . $_SESSION['username'] . '.</p>';
                             echo '<input id="inpComment" type="text" name="inpComment" placeholder="Comment on the article"/>';
                             echo '<button type="submit" name="comment" class="btn">Comment</button>';
                         }
+                        //guests cannot comment
                         else {
                             echo '<p> show comments but guests cannot comment </p>';
                         }
+
+                        //sql statments
+                        $sql = "SELECT uidUsers, comments FROM usercom";
+                        $result = $conn->query($sql);
+                        
+                        //to check if database is not empty
+                        if ($result->num_rows > 0) {
+                            // output data of user and comment
+                            while($row = $result->fetch_assoc()) {
+                                echo "<br> users: ". $row["uidUsers"]. " - comment: ". $row["comments"].  "<br>";
+                            }
+                        } 
+                        //it is empty
+                        else {
+                            echo "0 results";
+                        }
+                        
+                        $conn->close();
                     ?>
                 
 
