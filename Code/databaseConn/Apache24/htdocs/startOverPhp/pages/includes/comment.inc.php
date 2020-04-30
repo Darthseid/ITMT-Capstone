@@ -17,7 +17,8 @@
             exit();
         }
         else {
-            echo "failed";
+            echo '<script Type="javascript">alert("JavaScript Alert Box by PHP")</script>';
+            header("Location: ../blogList.php?commentfail");
         }
         mysqli_stmt_close($stmt);
         mysqli_close($conn);
