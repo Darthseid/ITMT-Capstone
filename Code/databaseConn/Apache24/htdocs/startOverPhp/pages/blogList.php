@@ -215,15 +215,79 @@
             </div><br>
         </form>
 
-        <div id="items">
-            <h2 id="test"> Protect Your Computer From Viruses, Hackers, and Spies</h2>
-            <img src="../media/Post3.PNG" id="images">
-            <p id="date">December 3, 2019 author: XAVIER BECERRA</p>
-            <p id="postDes"><a href="https://oag.ca.gov/privacy/facts/online-privacy/protect-your-computer">Today we use internet-connected devices in all 
-                aspects of our lives. We go online to search for information, shop, bank, do homework, play games, and stay in touch with family and friends through social networking. As a resul
-                our devices contain a wealth of personal information about us. This may include banking and other financial records, and medical information...</a></p>
-            <input id="inpComment" type="text" name="inpProduct" placeholder="Comment on the article"/>
-			<input type="submit" value="Submit">
+        <form action="includes/comment.inc.php" method="POST">
+            <div id="items">
+                <h2 id="test"> Protect Your Computer From Viruses, Hackers, and Spies</h2>
+                <img src="../media/Post3.PNG" id="images">
+                <p id="date">December 3, 2019 author: XAVIER BECERRA</p>
+                <p id="postDes"><a href="https://oag.ca.gov/privacy/facts/online-privacy/protect-your-computer">Today we use internet-connected devices in all 
+                    aspects of our lives. We go online to search for information, shop, bank, do homework, play games, and stay in touch with family and friends through social networking. As a resul
+                    our devices contain a wealth of personal information about us. This may include banking and other financial records, and medical information...</a></p>
+                    <h3> Comments </h3>
+                    
+                    <?php
+                    require 'includes/dbh.inc.php';
+                    //guest view
+                    if ($_SESSION == null) {
+                        //sql statments
+                        $sql = "SELECT uidUsers, comment3 FROM usercom WHERE idUsers > 1 AND comment3 != ''";
+                        $result = $conn->query($sql);
+
+                        //to check if database is not empty
+                            if ($result->num_rows > 0) {
+                                    // output data of user and comment
+                                while($row = $result->fetch_assoc()) {
+                                    echo $row["uidUsers"]. " - " . $row["comment3"].  "<br>";
+                                }
+                            } 
+                            //it is empty
+                            else {}
+                        $conn->close();
+                    }
+                    //user/admin view
+                    else{
+                        $admin = $_SESSION['username'];
+                        //Users
+                        if ($admin != "admin") {
+                            echo '<input id="inpComment" type="text" name="inpComment" placeholder="Comment on the article"/>';
+                            echo '<button type="submit" name="comment3" class="btn">Comment</button>';
+
+                            //sql statments
+                            $sql = "SELECT uidUsers, comment3 FROM usercom WHERE idUsers > 1 AND comment3 != ''";
+                            $result = $conn->query($sql);
+
+                            //to check if database is not empty
+                                if ($result->num_rows > 0) {
+                                    while($row = $result->fetch_assoc()) {
+                                        echo "<br>" . $row["uidUsers"]. " - " . $row["comment3"].  "<br>";
+                                    }
+                                } 
+                                //it is empty
+                                else {}
+                            $conn->close();
+                        }
+
+                        //admin view
+                        else if ($admin == "admin") {
+                            //sql statments
+                            $sql = "SELECT uidUsers, comment3 FROM usercom";
+                            $result = $conn->query($sql);
+
+                            //to check if database is not empty
+                                if ($result->num_rows > 0) {
+                                    // output data of user and comment
+                                    while($row = $result->fetch_assoc()) {
+                                        echo "<br> Users:".$row["uidUsers"] ." - Comment:".$row["comment3"].  "<br>";
+                                    }
+                                } 
+                                //it is empty
+                                else {}
+                            $conn->close();
+                        }     
+                    }   
+                    ?>
+            </div><br>
+       </form>
         </div>
 
 
