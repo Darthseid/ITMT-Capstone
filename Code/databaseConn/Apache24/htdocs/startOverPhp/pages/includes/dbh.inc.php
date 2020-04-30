@@ -19,7 +19,7 @@ $sql = "CREATE TABLE usercom (
     uidUsers TINYTEXT NOT NULL,
     emailUsers TINYTEXT NOT NULL,
     pwdUsers TINYTEXT NOT NULL,
-    comments LONGTEXT NOT NULL
+    comments VARCHAR(255) NOT NULL
     )";
 
 
