@@ -56,35 +56,75 @@
                     
                    
                     <?php
-                        //makes sure account users can comment
-                        if (isset($_SESSION['username'])) {
-                            echo '<p> you are logged in ' . $_SESSION['username'] . '.</p>';
-                            echo '<input id="inpComment" type="text" name="inpComment" placeholder="Comment on the article"/>';
-                            echo '<button type="submit" name="comment" class="btn">Comment</button>';
-                        }
-                        //guests cannot comment
-                        else {
-                            
-                        }
 
+                    //guest view
+                    if ($_SESSION == null) {
                         //sql statments
-                        $sql = "SELECT uidUsers, comments FROM usercom";
+                        $sql = "SELECT comments FROM usercom";
                         $result = $conn->query($sql);
 
                         //to check if database is not empty
                             if ($result->num_rows > 0) {
                                 // output data of user and comment
                                 while($row = $result->fetch_assoc()) {
-                                    echo "<br>".$row["uidUsers"]. "<br>". $row["comments"].  "<br>";
+                                    echo  $row["comments"].  "<br>";
                                 }
                             } 
                             //it is empty
                             else {
                                 echo "0 results";
                             }
+                        $conn->close();
+                    }
+                    //user/admin view
+                    else{
+                        $admin = $_SESSION['username'];
+                        //makes sure account users can comment
+                        if ($admin != "admin") {
+                            //echo '<p> you are logged in ' . $_SESSION['username'] . '</p>';
+                            echo '<input id="inpComment" type="text" name="inpComment" placeholder="Comment on the article"/>';
+                            echo '<button type="submit" name="comment" class="btn">Comment</button>';
+
+                            //sql statments
+                            $sql = "SELECT comments FROM usercom";
+                            $result = $conn->query($sql);
+
+                            //to check if database is not empty
+                                if ($result->num_rows > 0) {
+                                    // output data of user and comment
+                                    while($row = $result->fetch_assoc()) {
+                                        echo  $row["comments"].  "<br>";
+                                    }
+                                } 
+                                //it is empty
+                                else {
+                                    echo "0 results";
+                                }
+                            $conn->close();
+                        }
+                        //admin view
+                        else if ($admin == "admin") {
+                            //sql statments
+                            $sql = "SELECT uidUsers, comments FROM usercom";
+                            $result = $conn->query($sql);
+
+                            //to check if database is not empty
+                                if ($result->num_rows > 0) {
+                                    // output data of user and comment
+                                    while($row = $result->fetch_assoc()) {
+                                        echo "<br> Users:".$row["uidUsers"] ." - Comment:".$row["comments"].  "<br>";
+                                    }
+                                } 
+                                //it is empty
+                                else {
+                                    echo "0 results";
+                                }
+                            $conn->close();
+                        }
 
                         
-                        $conn->close();
+                    }
+                   
                     ?>
                 
 
@@ -114,6 +154,9 @@
             <input id="inpComment" type="text" name="inpProduct" placeholder="Comment on the article"/>
 			<input type="submit" value="Submit">
         </div>
+
+
+
     </div>
     </body>
 </html>
