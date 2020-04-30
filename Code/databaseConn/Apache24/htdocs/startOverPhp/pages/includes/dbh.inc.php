@@ -3,9 +3,11 @@
 $servername = "localhost";
 $dBUsername = "root";
 $dBPassword = "Clarinet51423!";//change this to your database info
-$dBName = "logintest";//change this to your database info
+$dBName = "boomSaver";//change this to your database info
 $user = "admin";
 $pass = "root";
+
+
 
 //connection to our database
 $conn = mysqli_connect($servername, $dBUsername, $dBPassword, $dBName);
