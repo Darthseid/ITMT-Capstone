@@ -29,16 +29,34 @@
         <img class="titlemain" src="../media/boomLogo.png" alt = "Boom Saver Logo" />
         <?php
             if (isset($_SESSION['username'])) {
+                //admin navigation
+                if($_SESSION['username'] == "admin") {
+                    echo '<a href="includes/logout.inc.php"> Log Out </a>';
+                    echo '<a href="admin.php"> Users </a>';
+                }
+                else {
+                //user login
                 echo '<a href="includes/logout.inc.php"> Log Out </a>';
+                echo '<a href="history.php"> My History </a>';
+                echo '<a href="blogList.php"> Blogs</a>';
+                echo '<a href="contact.php"> Contact Us</a>';
+                echo '<a href="../index.php"> Tech News </a>';
+                }
+                
+                
             }
             else {
                 echo '<a href="login.php"> Sign In </a>';
+                echo '<a href="history.php"> My History </a>';
+                echo '<a href="blogList.php"> Blogs</a>';
+                echo '<a href="contact.php"> Contact Us</a>';
+                echo '<a href="../index.php"> Tech News </a>';
             }
          ?>
-          <a href="history.php"> My History </a>
-          <a href="blogList.php"> Blogs</a>
-          <a href="contact.php"> Contact Us</a>
-          <a href="../index.php"> Tech News </a>
+          
+          
+          
+          
        </ul>
     </nav>
 
@@ -56,7 +74,6 @@
                     
                    
                     <?php
-
                     //guest view
                     if ($_SESSION == null) {
                         //sql statments
