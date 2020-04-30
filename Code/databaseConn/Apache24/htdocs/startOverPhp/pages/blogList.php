@@ -35,16 +35,15 @@
                     echo '<a href="admin.php"> Users </a>';
                 }
                 else {
-                //user login
+                //user navigation
                 echo '<a href="includes/logout.inc.php"> Log Out </a>';
                 echo '<a href="history.php"> My History </a>';
                 echo '<a href="blogList.php"> Blogs</a>';
                 echo '<a href="contact.php"> Contact Us</a>';
                 echo '<a href="../index.php"> Tech News </a>';
-                }
-                
-                
+                }                   
             }
+            //guest navigation
             else {
                 echo '<a href="login.php"> Sign In </a>';
                 echo '<a href="history.php"> My History </a>';
@@ -71,20 +70,20 @@
                     The trend represents a huge shift in how products are made and used,
                     as network connectivity is added to products that were not previously intended to have this functionality....</a> 
                     </p>
-                    
+                <h3> Comments </h3>
                    
                     <?php
                     //guest view
                     if ($_SESSION == null) {
                         //sql statments
-                        $sql = "SELECT comments FROM usercom";
+                        $sql = "SELECT uidUsers, comments FROM usercom WHERE idUsers > 1";
                         $result = $conn->query($sql);
 
                         //to check if database is not empty
                             if ($result->num_rows > 0) {
                                 // output data of user and comment
                                 while($row = $result->fetch_assoc()) {
-                                    echo  $row["comments"].  "<br>";
+                                    echo $row["uidUsers"]. " - " . $row["comments"].  "<br>";
                                 }
                             } 
                             //it is empty
@@ -96,21 +95,20 @@
                     //user/admin view
                     else{
                         $admin = $_SESSION['username'];
-                        //makes sure account users can comment
+                        //Users
                         if ($admin != "admin") {
-                            //echo '<p> you are logged in ' . $_SESSION['username'] . '</p>';
                             echo '<input id="inpComment" type="text" name="inpComment" placeholder="Comment on the article"/>';
                             echo '<button type="submit" name="comment" class="btn">Comment</button>';
 
                             //sql statments
-                            $sql = "SELECT comments FROM usercom";
+                            $sql = "SELECT uidUsers, comments FROM usercom WHERE idUsers > 1";
                             $result = $conn->query($sql);
 
                             //to check if database is not empty
                                 if ($result->num_rows > 0) {
                                     // output data of user and comment
                                     while($row = $result->fetch_assoc()) {
-                                        echo  $row["comments"].  "<br>";
+                                        echo "<br>" . $row["uidUsers"]. " - " . $row["comments"].  "<br>";
                                     }
                                 } 
                                 //it is empty
@@ -119,6 +117,7 @@
                                 }
                             $conn->close();
                         }
+
                         //admin view
                         else if ($admin == "admin") {
                             //sql statments
@@ -137,15 +136,9 @@
                                     echo "0 results";
                                 }
                             $conn->close();
-                        }
-
-                        
-                    }
-                   
+                        }     
+                    }   
                     ?>
-                
-
-
             </div><br>
         </form>
 
