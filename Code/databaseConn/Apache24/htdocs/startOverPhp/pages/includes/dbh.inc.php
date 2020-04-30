@@ -19,9 +19,18 @@ $sql = "CREATE TABLE usercom (
     uidUsers TINYTEXT NOT NULL,
     emailUsers TINYTEXT NOT NULL,
     pwdUsers TINYTEXT NOT NULL,
-    comments VARCHAR(255) NOT NULL
+    comment1 VARCHAR(255) NOT NULL,
+    comment2 VARCHAR(255) NOT NULL,
+    comment3 VARCHAR(255) NOT NULL
     )";
-
+    /*add more comments
+    comment2 VARCHAR(255) NOT NULL
+    comment3 VARCHAR(255) NOT NULL
+    comment4 VARCHAR(255) NOT NULL
+    comment5 VARCHAR(255) NOT NULL
+    comment6 VARCHAR(255) NOT NULL
+    comment7 VARCHAR(255) NOT NULL
+    */
 
 
 if ($conn->query($sql)) {
@@ -43,8 +52,8 @@ if ($stmt1->num_rows) {
 //automatically creates an admin account
 else {
     echo "created";
-    $admin = "INSERT INTO usercom (idUsers, uidUsers, emailUsers, pwdUsers, comments)
-    VALUES ('0', 'admin', 'admin@example.com', 'root', '')";
+    $admin = "INSERT INTO usercom (idUsers, uidUsers, emailUsers, pwdUsers, comment1, comment2, comment3)
+    VALUES ('0', 'admin', 'admin@example.com', 'root', '', '', '')";
     $conn->query($admin);
 }
 
