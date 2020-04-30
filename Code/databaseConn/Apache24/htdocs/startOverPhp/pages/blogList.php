@@ -1,4 +1,5 @@
 <?php
+   // error_reporting(E_ERROR | E_WARNING | E_PARSE);
     require 'includes/dbh.inc.php';
     session_start();
 ?>
@@ -76,20 +77,18 @@
                     //guest view
                     if ($_SESSION == null) {
                         //sql statments
-                        $sql = "SELECT uidUsers, comments FROM usercom WHERE idUsers > 1";
+                        $sql = "SELECT uidUsers, comment1 FROM usercom WHERE idUsers > 1 AND comment1 != ''";
                         $result = $conn->query($sql);
 
                         //to check if database is not empty
                             if ($result->num_rows > 0) {
-                                // output data of user and comment
+                                    // output data of user and comment
                                 while($row = $result->fetch_assoc()) {
-                                    echo $row["uidUsers"]. " - " . $row["comments"].  "<br>";
+                                    echo $row["uidUsers"]. " - " . $row["comment1"].  "<br>";
                                 }
                             } 
                             //it is empty
-                            else {
-                                echo "0 results";
-                            }
+                            else {}
                         $conn->close();
                     }
                     //user/admin view
@@ -98,43 +97,38 @@
                         //Users
                         if ($admin != "admin") {
                             echo '<input id="inpComment" type="text" name="inpComment" placeholder="Comment on the article"/>';
-                            echo '<button type="submit" name="comment" class="btn">Comment</button>';
+                            echo '<button type="submit" name="comment1" class="btn">Comment</button>';
 
                             //sql statments
-                            $sql = "SELECT uidUsers, comments FROM usercom WHERE idUsers > 1";
+                            $sql = "SELECT uidUsers, comment1 FROM usercom WHERE idUsers > 1 AND comment1 != ''";
                             $result = $conn->query($sql);
 
                             //to check if database is not empty
                                 if ($result->num_rows > 0) {
-                                    // output data of user and comment
                                     while($row = $result->fetch_assoc()) {
-                                        echo "<br>" . $row["uidUsers"]. " - " . $row["comments"].  "<br>";
-                                    }
+                                        echo "<br>" . $row["uidUsers"]. " - " . $row["comment1"].  "<br>";
+                                  }
                                 } 
                                 //it is empty
-                                else {
-                                    echo "0 results";
-                                }
+                                else {}
                             $conn->close();
                         }
 
                         //admin view
                         else if ($admin == "admin") {
                             //sql statments
-                            $sql = "SELECT uidUsers, comments FROM usercom";
+                            $sql = "SELECT uidUsers, comment1 FROM usercom";
                             $result = $conn->query($sql);
 
                             //to check if database is not empty
                                 if ($result->num_rows > 0) {
                                     // output data of user and comment
                                     while($row = $result->fetch_assoc()) {
-                                        echo "<br> Users:".$row["uidUsers"] ." - Comment:".$row["comments"].  "<br>";
+                                        echo "<br> Users:".$row["uidUsers"] ." - Comment:".$row["comment1"].  "<br>";
                                     }
                                 } 
                                 //it is empty
-                                else {
-                                    echo "0 results";
-                                }
+                                else {}
                             $conn->close();
                         }     
                     }   
@@ -142,17 +136,84 @@
             </div><br>
         </form>
 
+        <form action="includes/comment.inc.php" method="POST">
+            <div id="items">
+                <h2 id="test"> How Attackers Could Hijack Your Android Camera to Spy on You</h2>
+                <img src="../media/Post2.PNG" id="images">
+                <p id="date">January 8, 2020 author: Pedro Umbelino</p>
+                <p id="postDes"><a href="https://www.checkmarx.com/blog/how-attackers-could-hijack-your-android-camera"> In today’s digitally-connected society, smartphones have become an extension of us. Advanced camera and video 
+                    capabilities in particular are playing a massive role in this, as users are able to quickly take out their phones and capture any moment 
+                    in real-time with the simple click of a button. However, this presents a double-edged sword as these mobile...</a></p>
+                <h3> Comments </h3>
+                <?php
+                //always need a require
+                require 'includes/dbh.inc.php';
+                    //guest view
+                    if ($_SESSION == null) {
+                        //sql statments
+                        $sql = "SELECT uidUsers, comment2 FROM usercom WHERE idUsers > 1 AND comment2 != ''";
+                        $result = $conn->query($sql);
 
-        <div id="items">
-            <h2 id="test"> How Attackers Could Hijack Your Android Camera to Spy on You</h2>
-            <img src="../media/Post2.PNG" id="images">
-            <p id="date">January 8, 2020 author: Pedro Umbelino</p>
-            <p id="postDes"><a href="https://www.checkmarx.com/blog/how-attackers-could-hijack-your-android-camera"> In today’s digitally-connected society, smartphones have become an extension of us. Advanced camera and video 
-                capabilities in particular are playing a massive role in this, as users are able to quickly take out their phones and capture any moment 
-                in real-time with the simple click of a button. However, this presents a double-edged sword as these mobile...</a></p>
-            <input id="inpComment" type="text" name="inpProduct" placeholder="Comment on the article"/>
-			<input type="submit" value="Submit">
-        </div><br>
+                        //to check if database is not empty
+                            if ($result->num_rows > 0) {
+                                // output data of user and comment
+                                while($row = $result->fetch_assoc()) {
+                                    echo $row["uidUsers"]. " - " . $row["comment2"].  "<br>";
+                                }                                
+                            } 
+                            //it is empty
+                            else {}
+                        $conn->close();
+                    }
+
+                    
+                    else {
+                        //user/admin
+                        $admin = $_SESSION['username'];
+                        //Users
+                        if ($admin != "admin") {
+                            echo '<input id="inpComment" type="text" name="inpComment" placeholder="Comment on the article"/>';
+                            echo '<button type="submit" name="comment2" class="btn">Comment</button>';
+
+                            //sql statments
+                            $sql = "SELECT uidUsers, comment2 FROM usercom WHERE idUsers > 1 AND comment2 != ''";
+                            $result = $conn->query($sql);
+
+                            //to check if database is not empty
+                                if ($result->num_rows > 0) {
+                                    // output data of user and comment
+                                    while($row = $result->fetch_assoc()) {
+                                        echo "<br>" . $row["uidUsers"]. " - " . $row["comment2"].  "<br>";
+                                    }
+                                } 
+                                //it is empty
+                                else {}
+                            $conn->close();
+                        }
+
+                        //admin view
+                        else if ($admin == "admin") {
+                            //sql statments
+                            $sql = "SELECT uidUsers, comment2 FROM usercom";
+                            $result = $conn->query($sql);
+
+                            //to check if database is not empty
+                                if ($result->num_rows > 0) {
+                                    // output data of user and comment
+                                    while($row = $result->fetch_assoc()) {
+                                        echo "<br> Users:".$row["uidUsers"] ." - Comment:".$row["comment2"].  "<br>";
+                                    }
+                                } 
+                                //it is empty
+                                else {}
+                            $conn->close();
+                        }   
+                    }
+                    
+                ?>
+
+            </div><br>
+        </form>
 
         <div id="items">
             <h2 id="test"> Protect Your Computer From Viruses, Hackers, and Spies</h2>
