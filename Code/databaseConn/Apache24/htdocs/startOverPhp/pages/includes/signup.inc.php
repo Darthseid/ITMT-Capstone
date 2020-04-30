@@ -8,7 +8,9 @@ if(isset($_POST['submit'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $comment = "";
+    $comment1 = "";
+    $comment2 = "";
+    $comment3 = "";
     
     //checks if the any boxes are empty
    /* if (empty($username) || empty($email) || empty($password)) {
@@ -34,7 +36,7 @@ if(isset($_POST['submit'])) {
         }
 
         else {
-            $sql = "INSERT INTO usercom (uidUsers, emailUsers, pwdUsers, comments) VALUES (?, ?, ?, ?)";
+            $sql = "INSERT INTO usercom (uidUsers, emailUsers, pwdUsers, comment1, comment2, comment3) VALUES (?, ?, ?, ?, ?, ?)";
             $stmt = mysqli_stmt_init($conn);
             if (!mysqli_stmt_prepare($stmt, $sql)) {
                 header("Location: ../signup.php?error=sqlerror");
@@ -42,7 +44,7 @@ if(isset($_POST['submit'])) {
             }
             //the information is success
             else {
-                mysqli_stmt_bind_param($stmt, "ssss", $username, $email, $password, $comment);
+                mysqli_stmt_bind_param($stmt, "ssssss", $username, $email, $password, $comment1, $comment2, $comment3);
                 mysqli_stmt_execute($stmt);
                 mysqli_stmt_store_result($stmt);
                 header("Location: ../login.php?signup=success");
