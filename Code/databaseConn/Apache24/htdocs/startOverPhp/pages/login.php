@@ -21,6 +21,7 @@
         <ul id= "topbar">
         <img class="titlemain" src="../media/boomLogo.png" alt = "Boom Saver Logo" />
         <a href="login.php"> Sign In </a>
+        <a href="pages/history.php"> My History </a>
         <a href="blogList.php"> Blogs</a>
         <a href="contact.php"> Contact Us</a>
         <a href="../index.php"> Tech News </a>
