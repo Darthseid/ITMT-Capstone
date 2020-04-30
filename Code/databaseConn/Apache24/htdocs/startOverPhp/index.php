@@ -1,4 +1,5 @@
 <?php
+	require 'pages/includes/createdb.inc.php';
 	require 'pages/includes/dbh.inc.php';
 	require "pages/header.php";
 ?>
