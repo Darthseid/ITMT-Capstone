@@ -32,6 +32,7 @@
                 echo '<a href="pages/login.php"> Sign In </a>';
             }
         ?>
+        <a href="blogList.php"> Blogs</a>
        </ul>
     </nav>
 
