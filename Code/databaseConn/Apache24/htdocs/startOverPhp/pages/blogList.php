@@ -375,7 +375,67 @@
                 don’t know if there are some hackers who may put some viruses in their computers. 
                 Fortunately, there are some online games that can increase your internet and computer security...<a href="https://www.consumer.ftc.gov/media/game-0013-case-cyber-criminal"><b>(Jump right in to a game here!)</b></a></a></p>
                 <h3> Comments </h3>
+                <?php
+                    require 'includes/dbh.inc.php';
+                    //guest view
+                    if ($_SESSION == null) {
+                        //sql statments
+                        $sql = "SELECT uidUsers, comment5 FROM usercom WHERE idUsers > 1 AND comment5 != ''";
+                        $result = $conn->query($sql);
 
+                        //to check if database is not empty
+                            if ($result->num_rows > 0) {
+                                    // output data of user and comment
+                                while($row = $result->fetch_assoc()) {
+                                    echo $row["uidUsers"]. " - " . $row["comment4"].  "<br>";
+                                }
+                            } 
+                            //it is empty
+                            else {}
+                        $conn->close();
+                    }
+                    //user/admin view
+                    else{
+                        $admin = $_SESSION['username'];
+                        //Users
+                        if ($admin != "admin") {
+                            echo '<input id="inpComment" type="text" name="inpComment" placeholder="Comment on the article"/>';
+                            echo '<button type="submit" name="comment5" class="btn">Comment</button>';
+                            
+                            //sql statments
+                            $sql = "SELECT uidUsers, comment5 FROM usercom WHERE idUsers > 1 AND comment5 != ''";
+                            $result = $conn->query($sql);
+
+                            //to check if database is not empty
+                                if ($result->num_rows > 0) {
+                                    while($row = $result->fetch_assoc()) {
+                                        echo "<br>" . $row["uidUsers"]. " - " . $row["comment5"].  "<br>";
+                                    }
+                                } 
+                                //it is empty
+                                else {}
+                            $conn->close();
+                        }
+
+                        //admin view
+                        else if ($admin == "admin") {
+                            //sql statments
+                            $sql = "SELECT uidUsers, comment5 FROM usercom";
+                            $result = $conn->query($sql);
+
+                            //to check if database is not empty
+                                if ($result->num_rows > 0) {
+                                    // output data of user and comment
+                                    while($row = $result->fetch_assoc()) {
+                                        echo "<br> Users:".$row["uidUsers"] ." - Comment:".$row["comment5"].  "<br>";
+                                    }
+                                } 
+                                //it is empty
+                                else {}
+                            $conn->close();
+                        }     
+                    }   
+                    ?>
             </div><br>
         </form>
 
