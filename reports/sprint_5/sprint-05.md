@@ -48,7 +48,6 @@ that were added or removed since sprint-04
 
 ### Login System
 * https://github.com/illinoistech-itm/2020-team13w/commit/a21fff259e2b476b44f4d3dd298ae35847d68ac3
-
 ![dev](media/htmlPhp2.PNG)
 ![dev](media/htmlPhp3.PNG)
 
@@ -61,11 +60,83 @@ that were added or removed since sprint-04
 * https://github.com/illinoistech-itm/2020-team13w/commit/031d446a4a552b58b6a80bf0b41ddc2d55c525b0
 ![dev](media/commentSystemDev.PNG)
 
-* Show in the scripts required to build the Infrastructure, how you added the ability to clone application
-source code from your private repo to your local application
-* Show the creation of a non-root Database user and a brief explanation the reason
-for the permissions granted
-* Show that database encryption at rest is enabled from the code
+#### Automation
+        ## Acquiring GIT Project
+        git clone https://github.com/illinoistech-itm/2020-team13w.git
+        or
+        if having issues with cloning due to access, deploy ssh key to avoid any problems
+            - open powershell type: ssh-keygen
+            - press "enter" twice 
+            - next type: ls ~/.ssh to view files
+            - next type: cat ~/.ssh.id_rsa.pub
+            - copy from powershell the key
+            - go to the git project you want to view and look at settings/deploy keys
+            - click on add deploy key, give a title of machine accessing and paste key into key box
+            - do not check box and press add key
+            - go back to powershell and type git clone git@github.com:illinoistech-itm/2020-team13w
+            - press enter and you should be good to go on acquiring the project
+
+        ---Code---
+        <?php
+
+        $servername = "localhost";
+        $dBUsername = "root";
+        $dBPassword = "";//change this to your database info
+        $dBName = "boomSaver";//change this to your database info
+        $user = "admin";
+        $pass = "root";
+
+
+
+        //connection to our database
+        $conn = mysqli_connect($servername, $dBUsername, $dBPassword, $dBName);
+
+        if (!'conn') {
+            die("Connection failed: ".mysqli_connect_error());
+        }
+
+        $sql = "CREATE TABLE usercom (
+            idUsers INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+            uidUsers TINYTEXT NOT NULL,
+            emailUsers TINYTEXT NOT NULL,
+            pwdUsers TINYTEXT NOT NULL,
+            comment1 VARCHAR(255) NOT NULL,
+            comment2 VARCHAR(255) NOT NULL,
+            comment3 VARCHAR(255) NOT NULL,
+            comment4 VARCHAR(255) NOT NULL,
+            comment5 VARCHAR(255) NOT NULL
+            )";
+
+
+
+        if ($conn->query($sql)) {
+            echo "Table created successfully";
+        } else {
+            
+        }
+
+        //prepares the statement to look into table
+        $stmt1 = $conn->prepare('SELECT uidUsers, pwdUsers FROM usercom WHERE uidUsers = ? OR pwdUsers = ?');
+        $stmt1->bind_param('ss', $user, $pass);
+        $stmt1->execute();
+        $stmt1->store_result();
+
+        //checks if admin was already created
+        if ($stmt1->num_rows) {
+        
+        }
+        //automatically creates an admin account
+        else {
+            echo "created";
+            $admin = "INSERT INTO usercom (idUsers, uidUsers, emailUsers, pwdUsers, comment1, comment2, comment3, comment4, comment5)
+            VALUES ('0', 'admin', 'admin@example.com', 'root', '', '', '','', '')";
+            $conn->query($admin);
+        }
+        ---Code---
+
+#### non-root creation
+![dev](media/developer1.PNG)
+ - User is created to allow to leave a comment into the blog page, without an account you are not able to leave a comment.
 
 ## Junior Developer
  ### Admin
@@ -73,7 +144,6 @@ for the permissions granted
 * https://github.com/illinoistech-itm/2020-team13w/commit/384729965b2284e0c2378a35486aba76f0ad8770
 * https://github.com/illinoistech-itm/2020-team13w/commit/0ee1d2dafb15cd40ada368649d426b8be6a00017
 * https://github.com/illinoistech-itm/2020-team13w/commit/cdee2a600bd42c57ceff4ccf8c26e7741c920cd5
-
 ![dev](media/juniorDev1.PNG)
 
 
@@ -81,9 +151,15 @@ for the permissions granted
 * https://github.com/illinoistech-itm/2020-team13w/commit/12be9b4f04fe61f08d78011b4282d5fcd87c698a
 ![dev](media/juniorDev2.PNG)
 
-* For the 15 “test” user accounts, create 2 actions per user upon automated deploy of the system
-* For instance, have each user buy two things, or make two posts, or two uploaded photos, or flip two buttons
-* Show from the code the firewall ports opened on each discrete vm
+#### User Feature Experience
+##### Comment Section Usage
+![dev](media/juniorDev3.PNG)
+![dev](media/juniorDev4.PNG)
+##### Contact page responses
+![dev](media/juniorDev5.PNG)
+
+#### IP information
+![dev](media/juniorDev6.PNG)
 
 ## Project Manager
 * List any detailed assumptions your team made explaining deliverable context as needed
