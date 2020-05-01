@@ -37,7 +37,8 @@
  ![uiux](media/error_2.PNG) 
 #### Articles would become too small to read and comment box would go outside the page
  ![uiux](media/error_3.PNG) 
- 
+#### Header would be transparent at high widths 
+ ![uiux](media/error_4.PNG) 
  
 * Add screenshot of a minimum of 5 additional GitHub issues/bugs reported, assigned, and resolved
 
