@@ -42,13 +42,14 @@
 * Add screenshot of a minimum of 5 additional GitHub issues/bugs reported, assigned, and resolved
 
 ## Infrastructure
-* List all tasks that you have completed along with the artifacts proving they are complete (GitHub commit URL and Project Management artifact screenshot)
-* Create a virtual machine based Load-Balancer to route between two copies of the front end virtual machines (For example: Nginx)
-* Include a script that will build each of these discrete systems as virtual machines automatically, include instructions how to do this in the install.md located in the root of the GitHub repo
-– At a minimum of 4 systems: Load Balancer, Frontend 1, Frontend 2 Backend-datastore
-* Include in the Diagrams folder a diagram of all of the discrete servers and their IP addresses in your application (All systems need to be on a discrete server)
-* Include a list of external packages per system being installed for this application via package manager
-that were added or removed since sprint-04
+### Automation Database
+* https://github.com/illinoistech-itm/2020-team13w/commit/ae7f67e1af617bf5f6762219e510b9a43581d5ad
+* https://github.com/illinoistech-itm/2020-team13w/commit/0c97c47ae304a458bd78387d62bd307c1d2dec1e
+* https://github.com/illinoistech-itm/2020-team13w/commit/2a0d4aef862f6aec57111d79b8774eb760615fac
+ ![dev](media/databaseAutoInfrauc.PNG) 
+
+### Automation VM
+* VM automation was not created however database/table/admin user is all automatically made the moment a new user of the website jumps in. Later team members will be able to show the demostration on how this is going to work.
 
 ## Developer
 ### HTML to PHP
