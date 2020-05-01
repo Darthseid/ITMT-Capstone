@@ -2,12 +2,20 @@
 
 ### Team Number 13
 * Jorell Socorro - Infrastructure/Developer/Junior Developer
-* Amairani Lopez - UI/UX Artistructure
+* Amairani Lopez - UI/UX Infrastructure
 * Jared McVey   - Project Manager
 
-### UI/UX Artifacts
-* List all tasks that you have completed along with the artifacts proving they are complete (GitHub commit URL and Project Management artifact screenshot)
-* Show (screenshot with highlights) all UI/UX components added since sprint-04 for the User Story and give a short explanation of their function
+## UI/UX Artifacts
+### Login/ Sign Up Restyling
+
+#### https://github.com/illinoistech-itm/2020-team13w/commit/3cde618c1257252bf91bfbdb7eefadb08ea42fe1
+  ![uiux](trello_styling_1.PNG)
+  ![uiux](sign_in_1.png)
+
+#### 
+ ![uiux](trello_styling_2.PNG)  
+  
+### 
 * Show (screenshot with highlights) all UI/UX components added since sprint-04 for the Admin Story and/or Anonymous user and give a short explanation of their function
 * Add screenshot of a minimum of 5 additional GitHub issues/bugs reported, assigned, and resolved
 
