@@ -1,13 +1,13 @@
 # 2020-team13w
 
 
-## BoomScan Website
+## BoomSaver Website
 
-Boomscan is a simple website that allows users to be aware on technology security from vulnerbilities.
+BoomSaver is a simple website that allows users to be aware on technology security from vulnerbilities.
 
 Focus on this website is to allow users to be able to see different news or conflicts that relate to technology security. The main feature here is the blogging tab that allows users to read up on what was posted previously from other users. Keeping awareness to technology vulnerbilites is the best way to teach those who are not familiar.
 
-### Boomscan Walkthrough
+### BoomSaver Walkthrough
 
 * Navigation Tabs:
   * There are 4 different tabs that will provide the user an interactivity
