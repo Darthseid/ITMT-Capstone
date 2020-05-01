@@ -7,17 +7,21 @@ body {
 
 /*blogList*/
 
+#blogTitle{
+	color:grey;
+	margin-bottom:5%;
+}
+#blogComment{
+	margin: auto;
+	width: 100%;
+    text-align: center;	
+}
 #blogList{
 	background-color: white;
 	margin-left: 30%;
 	margin-right: 30%;
 	margin-top:4%;
 	height: 100%;
-}
-#blogTitle{
-	color:grey;
-	font-weight: bolder;
-	padding-top: 5%;
 }
 #items{
 	background-color: lightgrey;
