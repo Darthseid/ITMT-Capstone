@@ -411,7 +411,7 @@ fieldset{
 
  h4 {
   font-size: 15px;
-  color: #3387a2;
+  color: blue;
   width: 90%;
   margin: auto;
   padding-top: 10px;
@@ -529,78 +529,6 @@ figcaption{
   margin: auto;
 }
 
-/*end */
-
-/*contact page
-.contactpg {
-	background-size: 1800px 900px;
-	background-repeat: no-repeat;
-	margin: auto;
-	background-color: white;
-}
-
-.contact{
-	font-family: 'Montserrat', sans-serif;
-	font-weight: normal;
-	font-size: 25px;
-	color: #818181;
-	text-align: center;
-	width: 90%;
-	padding-top: 100px;
-	padding-bottom: 10px;
-	margin: auto;
-}
-
-.faq_container {
-	display: block;
-	padding-bottom: 50px;
-	width: 80%;
-	margin: auto;
-}
-
-.faq_question {
-	margin: 0px;
-	padding: 15px 0px 5px 0px;
-	display: inline-block;
-	cursor: pointer;
-	font-weight: bold;
-	color: #e16e12;
-}
-
-.faq_answer_container {
-	height: 0px;
-	overflow: hidden;
-	padding: 0px;
-	color: #bf1a2c;
-}
-
-
-#questions {
-	border-bottom: #818181;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-
-#contactForm{
-	display: inline-block;
-	text-align: center;
-	width: 100%;
-}
-
-#exampleMessage{
-	width: 80%;
-	height: 100px;
-	padding-bottom: 50px;
-	box-sizing: border-box;
-	// border: 2px solid #ccc;
-	// border-radius: 4px;
-	// background-color: #f8f8f8;
-	font-size: 16px;
-	resize: none; }
-*/
-
-
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
@@ -617,13 +545,19 @@ figcaption{
   background-color: #717171;
 }
 
-
+/* Contact Page*/
 iframe {
   text-align: center;
   margin:auto;
   width: 100%;
 }
 
+#googleForm {
+  display: block;
+  margin-left:5%;
+  margin-right: 5%;
+  margin-top:5%;
+}
 footer {
   font-family: 'Comic Sans MS', cursive, sans-serif;
   color: white;
