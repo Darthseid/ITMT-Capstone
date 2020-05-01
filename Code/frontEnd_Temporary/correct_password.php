@@ -1,6 +1,6 @@
 <?php
 if($result->num_rows == 1) {
-     if($user==$username && $pass=$password){    
+     if($user==$username && $pass==$password){    
             session_start();
             if($rank=="2"){
                 $_SESSION['mysesi']=$user;
@@ -18,5 +18,6 @@ if($result->num_rows == 1) {
 }
 else {
     echo "Invalid Login - Single entry not returned";
+}
 }
 ?>
