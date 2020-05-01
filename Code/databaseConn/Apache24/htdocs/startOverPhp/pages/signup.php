@@ -29,17 +29,17 @@
 
     <h1> Sign In </h1>
     <fieldset>
-    <form action="includes/signup.inc.php" method="POST">
+    <form action="includes/signup.inc.php" method="POST" id= 'signUp'>
       <!-- display validation errors-->
-      <div id = "login">
+      <div id = "signCont">
         <label id="emailText" for="email"><b>Email</b></label>
-        <input type="text" placeholder="Email" id="email" name="email" required>
+        <input type="text" placeholder="Email" id="inputBox" name="email" required>
 
         <label id="user" for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Username" id="username" name="username" required>
+        <input type="text" placeholder="Username" id="inputBox" name="username" required>
 
         <label id="pass" for="password"><b>Password</b></label>
-        <input type="password" placeholder="Password" id="password" name="password" required>
+        <input type="password" placeholder="Password" id="inputBox" name="password" required>
 
         <button type="submit" name="submit" class="btn">Register</button>
 
