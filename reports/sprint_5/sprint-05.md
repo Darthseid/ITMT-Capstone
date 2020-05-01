@@ -6,22 +6,16 @@
 * Jared McVey   - Project Manager
 
 ## UI/UX Artifacts
-<<<<<<< HEAD
-* https://github.com/illinoistech-itm/2020-team13w/commit/3cde618c1257252bf91bfbdb7eefadb08ea42fe1
-
-* Show (screenshot with highlights) all UI/UX components added since sprint-04 for the User Story and give a short explanation of their function
-=======
 ### Login/ Sign Up Restyling
 
 #### https://github.com/illinoistech-itm/2020-team13w/commit/3cde618c1257252bf91bfbdb7eefadb08ea42fe1
-  ![uiux](trello_styling_1.PNG)
-  ![uiux](sign_in_1.png)
+  ![uiux](media/trello_styling_1.PNG)
+  ![uiux](media/sign_in_1.png)
 
 #### 
- ![uiux](trello_styling_2.PNG)  
+ ![uiux](media/trello_styling_2.PNG)  
   
 ### 
->>>>>>> 5af1190dde82162389f91e1da7c842af76c0873b
 * Show (screenshot with highlights) all UI/UX components added since sprint-04 for the Admin Story and/or Anonymous user and give a short explanation of their function
 * Add screenshot of a minimum of 5 additional GitHub issues/bugs reported, assigned, and resolved
 
@@ -31,7 +25,7 @@
 * https://github.com/illinoistech-itm/2020-team13w/commit/0c97c47ae304a458bd78387d62bd307c1d2dec1e
 * https://github.com/illinoistech-itm/2020-team13w/commit/2a0d4aef862f6aec57111d79b8774eb760615fac
 
-##### image
+![dev](media/databaseAutoInfrauc.PNG)
 
 
 * Create a virtual machine based Load-Balancer to route between two copies of the front end virtual machines (For example: Nginx)
@@ -42,10 +36,15 @@
 that were added or removed since sprint-04
 
 ## Developer
+### HTML to PHP
+* https://github.com/illinoistech-itm/2020-team13w/commit/a21fff259e2b476b44f4d3dd298ae35847d68ac3
+![dev](media/htmlPhp.PNG)
+
 ### Login System
 * https://github.com/illinoistech-itm/2020-team13w/commit/a21fff259e2b476b44f4d3dd298ae35847d68ac3
 
-##### image
+![dev](media/htmlPhp2.PNG)
+![dev](media/htmlPhp3.PNG)
 
 ### Comment System
 * https://github.com/illinoistech-itm/2020-team13w/commit/990b82782b9203c11648b7ca6a3ac4f8a2b48fa1
@@ -54,8 +53,7 @@ that were added or removed since sprint-04
 * https://github.com/illinoistech-itm/2020-team13w/commit/6b1da485202a077d290fa00348ff27606274fbf7
 * https://github.com/illinoistech-itm/2020-team13w/commit/47efdf193ae05d9825b427f6c67788106ba3049d 
 * https://github.com/illinoistech-itm/2020-team13w/commit/031d446a4a552b58b6a80bf0b41ddc2d55c525b0
-##### image
-
+![dev](media/commentSystemDev.PNG)
 
 * Show in the scripts required to build the Infrastructure, how you added the ability to clone application
 source code from your private repo to your local application
@@ -70,11 +68,13 @@ for the permissions granted
 * https://github.com/illinoistech-itm/2020-team13w/commit/0ee1d2dafb15cd40ada368649d426b8be6a00017
 * https://github.com/illinoistech-itm/2020-team13w/commit/cdee2a600bd42c57ceff4ccf8c26e7741c920cd5
 
-##### image
+![dev](media/juniorDev1.PNG)
 
 
+#### Feature on obtaining user info
+* https://github.com/illinoistech-itm/2020-team13w/commit/12be9b4f04fe61f08d78011b4282d5fcd87c698a
+![dev](media/juniorDev2.PNG)
 
-* Create a feature and functionality on the Admin portal of your site that allows an admin to export (or dump) the entire database to a local file
 * For the 15 “test” user accounts, create 2 actions per user upon automated deploy of the system
 * For instance, have each user buy two things, or make two posts, or two uploaded photos, or flip two buttons
 * Show from the code the firewall ports opened on each discrete vm
