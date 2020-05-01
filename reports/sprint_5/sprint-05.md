@@ -12,22 +12,28 @@
   ![uiux](media/trello_styling_1.PNG)
   ![uiux](media/sign_in_1.png)
 
-#### 
+### Cleaning up styling 
+
+#### https://github.com/illinoistech-itm/2020-team13w/commit/cd464a9370190f0ee6cbb35b6d7a1848de257047
  ![uiux](media/trello_styling_2.PNG)  
-  
-### 
-* Show (screenshot with highlights) all UI/UX components added since sprint-04 for the Admin Story and/or Anonymous user and give a short explanation of their function
+ ![uiux](media/contact_section.PNG)
+
+### Making the comment section and readjusting the blog
+
+#### https://github.com/illinoistech-itm/2020-team13w/commit/a2eeb920e33dbdcae039ba1ae9240d0af2452490
+ ![uiux](media/trello_styling_3.PNG) 
+ ![uiux](media/comment_section.PNG)   
+ 
+### Added user interactivity and warnings 
+
+#### https://github.com/illinoistech-itm/2020-team13w/commit/ea8435d9e562895b57fcb9ec56812edbb195c048
+ ![uiux](media/user_home.PNG) 
+ ![uiux](media/comment_section_2.PNG)  
+ 
 * Add screenshot of a minimum of 5 additional GitHub issues/bugs reported, assigned, and resolved
 
 ## Infrastructure
-### Database Automation
-* https://github.com/illinoistech-itm/2020-team13w/commit/ae7f67e1af617bf5f6762219e510b9a43581d5ad
-* https://github.com/illinoistech-itm/2020-team13w/commit/0c97c47ae304a458bd78387d62bd307c1d2dec1e
-* https://github.com/illinoistech-itm/2020-team13w/commit/2a0d4aef862f6aec57111d79b8774eb760615fac
-
-![dev](media/databaseAutoInfrauc.PNG)
-
-
+* List all tasks that you have completed along with the artifacts proving they are complete (GitHub commit URL and Project Management artifact screenshot)
 * Create a virtual machine based Load-Balancer to route between two copies of the front end virtual machines (For example: Nginx)
 * Include a script that will build each of these discrete systems as virtual machines automatically, include instructions how to do this in the install.md located in the root of the GitHub repo
 – At a minimum of 4 systems: Load Balancer, Frontend 1, Frontend 2 Backend-datastore
@@ -79,6 +85,6 @@ for the permissions granted
 * For instance, have each user buy two things, or make two posts, or two uploaded photos, or flip two buttons
 * Show from the code the firewall ports opened on each discrete vm
 
-### Project Manager
+## Project Manager
 * List any detailed assumptions your team made explaining deliverable context as needed
 * Instructor will execute instructions in your install.md file and recreate your live demonstration, so test, test, test.
