@@ -12,14 +12,27 @@
   ![uiux](trello_styling_1.PNG)
   ![uiux](sign_in_1.png)
 
-#### 
+### Cleaning up styling 
+
+#### https://github.com/illinoistech-itm/2020-team13w/commit/cd464a9370190f0ee6cbb35b6d7a1848de257047
  ![uiux](trello_styling_2.PNG)  
-  
-### 
-* Show (screenshot with highlights) all UI/UX components added since sprint-04 for the Admin Story and/or Anonymous user and give a short explanation of their function
+ ![uiux](contact_section.PNG)
+
+### Making the comment section and readjusting the blog
+
+#### https://github.com/illinoistech-itm/2020-team13w/commit/a2eeb920e33dbdcae039ba1ae9240d0af2452490
+ ![uiux](trello_styling_3.PNG) 
+ ![uiux](comment_section.PNG)   
+ 
+### Added user interactivity and warnings 
+
+#### https://github.com/illinoistech-itm/2020-team13w/commit/ea8435d9e562895b57fcb9ec56812edbb195c048
+ ![uiux](user_home.PNG) 
+ ![uiux](comment_section_2.PNG)  
+ 
 * Add screenshot of a minimum of 5 additional GitHub issues/bugs reported, assigned, and resolved
 
-### Infrastructure
+## Infrastructure
 * List all tasks that you have completed along with the artifacts proving they are complete (GitHub commit URL and Project Management artifact screenshot)
 * Create a virtual machine based Load-Balancer to route between two copies of the front end virtual machines (For example: Nginx)
 * Include a script that will build each of these discrete systems as virtual machines automatically, include instructions how to do this in the install.md located in the root of the GitHub repo
@@ -28,7 +41,7 @@
 * Include a list of external packages per system being installed for this application via package manager
 that were added or removed since sprint-04
 
-### Developer
+## Developer
 * https://github.com/illinoistech-itm/2020-team13w/commit/a21fff259e2b476b44f4d3dd298ae35847d68ac3
 * 
 * Show in the scripts required to build the Infrastructure, how you added the ability to clone application
@@ -37,13 +50,13 @@ source code from your private repo to your local application
 for the permissions granted
 * Show that database encryption at rest is enabled from the code
 
-### Junior Developer
+## Junior Developer
 * List all tasks that you have completed along with the artifacts proving they are complete (GitHub commit URL and Project Management artifact screenshot)
 * Create a feature and functionality on the Admin portal of your site that allows an admin to export (or dump) the entire database to a local file
 * For the 15 “test” user accounts, create 2 actions per user upon automated deploy of the system
 * For instance, have each user buy two things, or make two posts, or two uploaded photos, or flip two buttons
 * Show from the code the firewall ports opened on each discrete vm
 
-### Project Manager
+## Project Manager
 * List any detailed assumptions your team made explaining deliverable context as needed
 * Instructor will execute instructions in your install.md file and recreate your live demonstration, so test, test, test.
