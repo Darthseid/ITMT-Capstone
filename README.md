@@ -1,75 +1,47 @@
 # 2020-team13w
-content needs to change much...
-## BoomScan
 
-Boomscan is a simple and intuitive internal network mapper and vulnerability dashboard for households.
 
-It is designed with a focus on IoT Devices found in a "Smart Home" for home automation. This device requires little to no configuration by the user. Simply connect it to the network via an ethernet cable.
+## BoomScan Website
 
-### Boomscan Scope
+Boomscan is a simple website that allows users to be aware on technology security from vulnerbilities.
 
-* Inside your network:
-  * Discover its IP Address
-  * Find connected devices in the network
-  * Identify what Those devices are, such as Model, hardware info, Manufacturer, and Operating System
-  * Identify what services are running and possible software versions installed.
-  * Detect Default configuration and default passwords found on the network
-  * Detect if vulnerable devices can be exploitable
-  * Provide a Proof of Concept (PoC) if a device is vulnerable to Remote Code Execution (RCE)
-  * Provide a method to mitigate found vulnerabilities on the network.
-* Public Exposure
-  * Find if any devices are exposed to your Public IP Address
-    * This is your IP address that your Internet Service Provider Assigns you.
-  * Find vulnerable services that should not be easily exposed to the outside world
+Focus on this website is to allow users to be able to see different news or conflicts that relate to technology security. The main feature here is the blogging tab that allows users to read up on what was posted previously from other users. Keeping awareness to technology vulnerbilites is the best way to teach those who are not familiar.
+
+### Boomscan Walkthrough
+
+* Navigation Tabs:
+  * There are 5 different tabs that will provide the user an interactivity
+    * Tech News
+      * Home page that is shown to the user at the beginning, seeing news that has occurred that is related to technology vulnerbilities.
+      * There is also a button that automatically jumps to the blogging page that will grab the users attention.
+    * Contact Us
+      * With any comments or conerns on what the website is provided for the user, it is necessary that their experience is great.
+      * By submitting a form with the use of google form it is linked directly to one of us to read and comment on what is needed for the website.
+    * Blog
+      * Users are able to see what other users has posted to make sure everyone is aware with what is going on.
+      * Unfortunately users are not able to upload their own posts but are able to provide a comments for each distinct post that was created.
+      * Posts are linked to articles or videos that are online for further reading.
+    * My History
+      * This is almost similar to the Tech News however this page shows previous news that were pushed out of the main page.
+      * With overflowing information everyday there has to be a way users are able to see what has happened in the past. Which is why this page was created
+    * Sign in
+      * To be unique and provide for the site a user is able to create their own account to be able to comment in each blog.
+      * Guests are not able to provide a comment because it is a necessary feature for a user wants to voice their own opinion that everyone is able to see.
+
   
-----
+---
+## Overall
 
-### Confirmed PoC
-
-* Printers
-  * Identify Printers with port 9100 open and perform sample remote code execution
-
-
+  * What to expect is a user friendly site that does the basics of providing users information that is needed to know about vulnerbilities
+  * Even if the amount of features are not extended far you are able to read what is going on
 
 ---
-## Setup Guide
-
-  1. Clone the repo
-  2. Navigate to the repo
-  3. follow the README in webInterface/
-
-  **Alternatively**, you can clone the repo and run:
-  
-    cd  webInterface
-    ./setup.sh
-
-
-
-----
-
 ## Team Members
 
 |Name|Email|Github|
 |-----|-----|-----|
-|Michael Kotlyar |mkotlyar@hawk.iit.edu |kotIIT|
-|Amairani Lopez |alopez21@hawk.iit.edu |jorell|
+|Amairani Lopez |alopez21@hawk.iit.edu |smallcpu|
 |Jared McVey | jmcvey1@hawk.iit.edu  |Darthseid|
 |Jorell Socorro | jsocorro@hawk.iit.edu |AmairaniL|
 
-## Contribution
 
-Lines Committed the Project
-
-simply clone the repo and run this script in the terminal
-
-    ./gitstats.sh
-
-March 8
-
-|Lines| User|
-|---|---|
-|3768 | kotIIT|
-|696 |jorell|
-|389 |Darthseid|
-| 48 |AmairaniL|
-|1 |jhajek|
