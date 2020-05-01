@@ -9,7 +9,7 @@
       <meta name="viewport"
           content="width=device-width,initial-scale=1.0,shrink-to-fit=no" /> 
       <link rel="stylesheet" type="text/css" href="../styling/normalize.css">			
-      <link rel="stylesheet" type="text/css" href="../styling/style.css" /> 
+      <link rel="stylesheet" type="text/css" href="../styling/styling.css" /> 
   </head>
   <body class="contactpg">
     <header id="header" class="homehead">
