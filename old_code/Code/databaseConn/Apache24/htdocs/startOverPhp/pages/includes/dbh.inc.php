@@ -2,8 +2,8 @@
 
 $servername = "localhost";
 $dBUsername = "root";
-$dBPassword = "Clarinet51423!";//change this to your database info
-$dBName = "boomSaver";//change this to your database info
+$dBPassword = "";//change this to your database info
+$dBName = "boomSaver";
 $user = "admin";
 $pass = "root";
 
