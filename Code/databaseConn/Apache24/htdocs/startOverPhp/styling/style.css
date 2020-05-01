@@ -24,6 +24,10 @@ body {
 }
 #items{
 	background-color: lightgrey;
+	width: 100%;
+}
+#grid{
+   margin-bottom: 5%;
 }
 
 #test{
@@ -90,12 +94,20 @@ a:visited{
 	padding-right:10%;
 }
 
-form{
+#signUp{
 	margin-left: 30%;
 	margin-right: 30%;
 	margin-top: 10%;
 	margin-bottom: 5%;
 }
+
+#logIn{
+	margin-left: 30%;
+	margin-right: 30%;
+	margin-top: 10%;
+	margin-bottom: 5%;
+}
+
 
 fieldset{
 	display: block;

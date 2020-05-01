@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
     <link rel="stylesheet" type="text/css" href="../styling/normalize.css">
-    <link rel="stylesheet" type="text/css" href="../styling/style.css" />
+    <link rel="stylesheet" type="text/css" href="../styling/style2.css" />
 	<script
       src="https://code.jquery.com/jquery-3.4.1.js"
       integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -69,7 +69,7 @@
 				}
 			?>
 		</div>
-        <form action="includes/comment.inc.php" method="POST">
+        <form action="includes/comment.inc.php" method="POST" id="grid">
             <div id="items">
                 <h2 id="test"> Why IoT vulnerabilities leave devices open to attack</h2>
                 <a href="https://www.technologyrecord.com/Article/why-iot-vulnerabilities-leave-devices-open-to-attack-76774"><img src="../media/Post1.PNG" id="images"></a>
