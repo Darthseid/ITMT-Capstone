@@ -181,4 +181,4 @@
     * Backend was one of the most important parts and most difficult since without it there the entire site will not function as a normal site.
     * The website is created to let users be aware on what is going on in the world with technology vulnerbilities, during the search for any sites I learned alot on different scenerios of computer vulnerbilities.
     * We were not able to add the feature to add blogs from users, however even though code was created it was not implemented into the site. That was one of our goals we were not able to reach but it is alright.
-* Instructor will execute instructions in your install.md file and recreate your live demonstration, so test, test, test.
+
