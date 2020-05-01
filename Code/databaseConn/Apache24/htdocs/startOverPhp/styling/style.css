@@ -22,10 +22,33 @@ body {
 	margin-right: 5%;
 	height: 100%;
 }
-#items{
-	background-color: lightgrey;
+#grid{
+   margin-bottom: 5%;
+   margin: auto;
+   width: 80%;
 }
-
+#items{
+	background-color: #e6e7e8;
+	width: 100%;
+}
+#items h3{
+	width: 98%;
+}
+#comSect{
+	margin: auto;
+	width: 95%;
+	padding-bottom: 2%;
+}
+#inpComment{
+	width: 70%;
+    height: 30px;
+	margin-bottom: 2%;
+}
+#comBut{
+	margin-left: 5%;
+    height: 35px;
+    width: 15%;
+}
 #test{
 	color: black;
 	padding-bottom: 1%;
@@ -73,15 +96,10 @@ a:visited{
 .newUserContainer {
 	margin-top: 10%;
 	color: grey;
+	text-align: center;
 }
 .loginContainer{
 	margin-top: 10%;
-}
-.btn {
-	margin-top: 10%;
-    margin-left: 22%;
-    height: 35px;
-    width: 100px;
 }
 
 /*signup*/
@@ -90,11 +108,30 @@ a:visited{
 	padding-right:10%;
 }
 
-form{
-	margin-left: 30%;
-	margin-right: 30%;
+#signCont{
+	display: block;
+}
+#signUp{
+	margin-left: 10%;
+	margin-right: 10%;
 	margin-top: 10%;
 	margin-bottom: 5%;
+}
+#inputBox{
+    width: 100%;
+}
+#logIn{
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 10%;
+	margin-bottom: 5%;
+}
+
+.btn {
+    margin: auto;
+	margin-top: 4%;
+    height: 30px;
+    width: 100%;
 }
 
 fieldset{
@@ -102,6 +139,8 @@ fieldset{
 	margin-left:33%;
 	margin-right: 33%;
 	margin-top:5%;
+	border-color: #ECA158;
+	border-style: solid;
 }
 
 /*Home Page Styling*/

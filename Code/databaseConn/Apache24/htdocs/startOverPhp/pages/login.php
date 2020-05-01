@@ -21,7 +21,6 @@
         <ul id= "topbar">
         <img class="titlemain" src="../media/boomLogo.png" alt = "Boom Saver Logo" />
         <a href="login.php"> Sign In </a>
-        <a href="pages/history.php"> My History </a>
         <a href="blogList.php"> Blogs</a>
         <a href="contact.php"> Contact Us</a>
         <a href="../index.php"> Tech News </a>
@@ -30,14 +29,14 @@
 
     <h1> Sign In </h1>
     <fieldset>
-    <form action="includes/login.inc.php" method="POST">
+    <form action="includes/login.inc.php" method="POST" id= 'logIn'>
       <!-- display validation errors-->
-      <div id = "login">
+      <div id = "signCont">
         <label id="user" for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Username" id="username" name="username" required>
+        <input type="text" placeholder="Username" id="inputBox" name="username" required>
 
         <label id="pass" for="password"><b>Password</b></label>
-        <input type="password" placeholder="Password" id="password" name="password" required>
+        <input type="password" placeholder="Password" id="inputBox" name="password" required>
 
         <button type="submit" name="login-submit" class="btn">Login</button>
 
@@ -48,7 +47,7 @@
         </div>
         <div class="newUserContainer">
           <span class="newUser"> New User?</span> 
-          <span class="test"><a href="signup.php"> create account</a></span>
+          <span class="test"><a href="signup.php"> Create Account</a></span>
         </div>
       </div>
     </form>

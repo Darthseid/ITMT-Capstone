@@ -27,7 +27,6 @@
                 echo '<a href="pages/login.php"> Sign In </a>';
             }
          ?>
-          <a href="pages/history.php"> My History </a>
           <a href="pages/blogList.php"> Blogs</a>
           <a href="pages/contact.php"> Contact Us</a>
           <a href="index.php"> Tech News</a>
