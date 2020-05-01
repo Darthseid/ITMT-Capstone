@@ -26,7 +26,6 @@
                 echo '<a href="login.php"> Sign In </a>';
             }
          ?>
-       <a href="history.php"> My History </a>
        <a href="blogList.php"> Blogs</a>
        <a href="contact.php"> Contact Us</a>
        <a href="../index.php"> Tech News </a>
@@ -34,7 +33,7 @@
      </nav>
     </header>
 	<!-- This is a simple goggle doc form embedded for questions  -->
-    <fieldset class="first">
+    <fieldset class="first" id="googleForm">
 		<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeAz48-6cjKLvxoB1esdk2tlIMU1YDNYwIBYadp961PQZvTxA/viewform?embedded=true"  width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
     </fieldset>
 	<footer id="footer">

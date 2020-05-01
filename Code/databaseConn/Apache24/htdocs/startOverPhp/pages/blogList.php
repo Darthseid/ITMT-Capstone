@@ -38,7 +38,6 @@
                 else {
                 //user navigation
                 echo '<a href="includes/logout.inc.php"> Log Out </a>';
-                echo '<a href="history.php"> My History </a>';
                 echo '<a href="blogList.php"> Blogs</a>';
                 echo '<a href="contact.php"> Contact Us</a>';
                 echo '<a href="../index.php"> Tech News </a>';
@@ -47,7 +46,6 @@
             //guest navigation
             else {
                 echo '<a href="login.php"> Sign In </a>';
-                echo '<a href="history.php"> My History </a>';
                 echo '<a href="blogList.php"> Blogs</a>';
                 echo '<a href="contact.php"> Contact Us</a>';
                 echo '<a href="../index.php"> Tech News </a>';
@@ -59,9 +57,18 @@
           
        </ul>
     </nav>
-
     <div id="blogList">
         <h1 id="blogTitle">Blog Posts</h1>
+		<div id="blogComment">
+			<?php
+				if (isset($_SESSION['username'])) {
+					echo '<p> Leave a comment ' . $_SESSION['username'] . '.</p>';
+				}
+				else {
+					echo '<p> Note you can not comment unless you are logged in! </p>';
+				}
+			?>
+		</div>
         <form action="includes/comment.inc.php" method="POST">
             <div id="items">
                 <h2 id="test"> Why IoT vulnerabilities leave devices open to attack</h2>
