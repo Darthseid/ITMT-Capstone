@@ -30,6 +30,15 @@
  ![uiux](media/user_home.PNG) 
  ![uiux](media/comment_section_2.PNG)  
  
+### Errors fixed from sprint 4
+#### Images would scale too big on bigger screens, so "Read More" button would be chopped.
+ ![uiux](media/error_1.PNG)
+#### Sign in/ Sign up input boxes would be all over the place specially of bigger screens
+ ![uiux](media/error_2.PNG) 
+#### Articles would become too small to read and comment box would go outside the page
+ ![uiux](media/error_3.PNG) 
+ 
+ 
 * Add screenshot of a minimum of 5 additional GitHub issues/bugs reported, assigned, and resolved
 
 ## Infrastructure
